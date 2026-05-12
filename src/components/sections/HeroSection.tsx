@@ -195,8 +195,8 @@ export function HeroSection() {
                 {/* Progress bars — Class 8, 9, 10 */}
                 <div className="space-y-5 mb-8">
                   {[
-                    { label: "Class 8",  percent: 78,  color: "#3d57ff" },
-                    { label: "Class 9",  percent: 65,  color: "#f5b800" },
+                    { label: "Class 8",  percent: 100,  color: "#f5b800" },
+                    { label: "Class 9",  percent: 100,  color: "#f5b800" },
                     { label: "Class 10", percent: 100, color: "#10b981" },
                   ].map((item) => (
                     <div key={item.label}>
