@@ -45,19 +45,16 @@ export function Navbar() {
         <nav className="section-container flex items-center justify-between h-16">
           {/*  */}
           <Link href="/" className="flex items-center gap-3 group" aria-label="Tovernax Academy Home">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-glow transition-transform group-hover:scale-105"
-              style={{ background: "linear-gradient(135deg, #1a27e1 0%, #3d57ff 100%)" }}>
-              T
-            </div>
-            <div>
-              <div className="font-display font-bold text-navy-950 text-lg leading-tight">
-                Tovernax
-              </div>
-              <div className="text-xs font-semibold tracking-widest text-gold-600 uppercase -mt-0.5">
-                Academy
-              </div>
-            </div>
-          </Link>
+  <img src="/logo.png" alt="Tovernax Legion" className="h-10 w-auto transition-transform group-hover:scale-105" />
+  <div>
+    <div className="font-display font-bold text-navy-950 text-lg leading-tight">
+      Tovernax
+    </div>
+    <div className="text-xs font-semibold tracking-widest text-gold-600 uppercase -mt-0.5">
+      Academy
+    </div>
+  </div>
+</Link>
 
           {/* Desktop Nav */}
           <div className="hidden lg:flex items-center gap-1">
