@@ -87,7 +87,7 @@ export function HeroSection() {
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
               Tovernax Academy blends academic excellence with competitive exam mastery — through
-              personalized coaching, hybrid learning, and expert mentorship designed for
+              personalized coaching, hybrid learning and expert mentorship designed for
               tomorrow's leaders.
             </p>
 
@@ -181,7 +181,7 @@ export function HeroSection() {
                         backgroundClip: "text",
                       }}
                     >
-                      Academic & Competitive Excellence
+                      Academic and Competitive Excellence
                     </div>
                   </div>
                   <div
