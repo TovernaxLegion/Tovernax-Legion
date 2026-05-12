@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 };
 
 const LEADERSHIP = [
-  { name: "Dr. Amitava Bose", role: "Director & Founder", expertise: "Former IIT Professor • 25 Years in Education", avatar: "AB" },
+  { name: "Praveer Upadhyay", role: "Director & Founder", expertise: "Defence, Indutry and Academia • 09 Years in Education", avatar: "AB" },
   { name: "Priyanka Sharma", role: "Academic Director", expertise: "M.Ed, PhD • Curriculum Design Expert", avatar: "PS" },
   { name: "Rahul Tiwari", role: "Head of Competitive Prep", expertise: "IIT Alumni • JEE Expert Mentor", avatar: "RT" },
   { name: "Meena Krishnan", role: "Director of Counseling", expertise: "Psychologist • 18 Years Experience", avatar: "MK" },
@@ -16,12 +16,12 @@ const LEADERSHIP = [
 ];
 
 const MILESTONES = [
-  { year: "2010", event: "Tovernax Academy founded with 50 students in Ahmedabad" },
-  { year: "2013", event: "Expanded to online platform — first 500 online students enrolled" },
-  { year: "2016", event: "Launched hybrid learning model — first of its kind in the region" },
-  { year: "2019", event: "10,000 student milestone — new campus inaugurated" },
-  { year: "2022", event: "Tovernax Legion formed — Academy becomes flagship institution" },
-  { year: "2024", event: "LMS platform launched — 150+ faculty, 25+ programs nationwide" },
+  { year: "January 2024", event: "Started with 30 students in Ahmedabad" },
+  { year: "January 2025", event: "Expanded to online platform — first 50 online students enrolled" },
+  { year: "July 2025", event: "Launched hybrid learning model — first of its kind in the region" },
+  { year: "January 2026", event: "With heavy demand, Founded Tovernax Academy Under Parent Company Tovernax Legion" },
+  { year: "May 2026", event: "Tovernax Academy becomes flagship institution" },
+  { year: "May 2026", event: "LMS platform launched — 50+ programs nationwide" },
 ];
 
 export default function AboutPage() {
@@ -39,7 +39,7 @@ export default function AboutPage() {
             <span style={{ color: "#ffd624" }}>Exceptional Futures</span>
           </h1>
           <p className="text-gray-300 text-xl max-w-2xl mx-auto">
-            From a single classroom in Ahmedabad to a nationwide institution — our journey is one of passion, perseverance, and purpose.
+            From a single classroom in Ahmedabad to a nationwide institution — our journey is one of passion, perseverance and purpose.
           </p>
         </div>
         <div className="absolute bottom-0 left-0 right-0">
@@ -60,23 +60,23 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  Tovernax Academy was founded in 2010 with a singular belief: every student, regardless of background, deserves access to world-class education and mentorship. What started as a small coaching center has grown into India's most innovative educational institution.
+                  Tovernax Academy was founded in 2024 with a singular belief: every student, regardless of background, deserves access to world-class education and mentorship. What started as a small coaching center has grown into India's most innovative educational institution.
                 </p>
                 <p>
-                  Our founders — educators, researchers, and technologists — recognized that traditional education was failing students by treating them as numbers rather than individuals. They built Tovernax Academy on a fundamentally different premise: personalized learning, data-driven insights, and genuine human connection.
+                  Our founders — educators, researchers and technologists — recognized that traditional education was failing students by treating them as numbers rather than individuals. They built Tovernax Academy on a fundamentally different premise: personalized learning, data-driven insights, and genuine human connection.
                 </p>
                 <p>
-                  Today, Tovernax Academy is part of the Tovernax Legion ecosystem, with over 10,000 enrolled students, 150+ faculty members, and a track record of producing top rankers across JEE, NEET, UPSC, and board examinations.
+                  Today, Tovernax Academy is part of the Tovernax Legion ecosystem, with over 500 enrolled students, 25+ faculty members, and a track record of producing top rankers across JEE, NEET, UPSC, and board examinations.
                 </p>
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4 reveal-right">
               {[
-                { emoji: "🎓", value: "10,000+", label: "Students Enrolled" },
-                { emoji: "👩‍🏫", value: "150+", label: "Expert Faculty" },
+                { emoji: "🎓", value: "500+", label: "Students Enrolled" },
+                { emoji: "👩‍🏫", value: "25+", label: "Expert Faculty" },
                 { emoji: "📈", value: "98%", label: "Success Rate" },
-                { emoji: "🏆", value: "25+", label: "Programs" },
-                { emoji: "🌐", value: "15+", label: "Cities Served" },
+                { emoji: "🏆", value: "50+", label: "Programs" },
+                { emoji: "🌐", value: "5+", label: "Cities Served" },
                 { emoji: "⭐", value: "4.9/5", label: "Student Rating" },
               ].map((stat) => (
                 <div key={stat.label} className="card-premium p-5 text-center">
