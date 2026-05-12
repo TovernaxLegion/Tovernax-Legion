@@ -8,8 +8,8 @@ export const SITE = {
   description: "A premier educational institution — subunit of Tovernax Legion",
   url: "https://academy.tovernax.com",
   email: "academy@tovernax.com",
-  phone: "+91 98765 43210",
-  address: "Tovernax Tower, Knowledge Park, Ahmedabad, Gujarat 380001",
+  phone: "+91 9597078806",
+  address: "Sixth Floor, Vrundavan Skylines, Vastral, Daskroi, Ahmedabad, Gujarat 382418",
   social: {
     instagram: "https://instagram.com/tovernaxacademy",
     youtube: "https://youtube.com/@tovernaxacademy",
