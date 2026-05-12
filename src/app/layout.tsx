@@ -181,7 +181,7 @@ export function HeroSection() {
                         backgroundClip: "text",
                       }}
                     >
-                      Academic Excellence
+                      Academic & Competitive Excellence
                     </div>
                   </div>
                   <div
