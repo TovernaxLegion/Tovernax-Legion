@@ -34,7 +34,7 @@ export function Navbar() {
       >
         {/* Top announcement bar */}
         <div className="bg-navy-950 text-white text-xs py-2 px-4 text-center hidden md:block">
-          <span>🎓 New Batch Starting June 1st, 2025 — </span>
+          <span>🎓 New Batch Starting July 1st, 2026 — </span>
           <Link href="/admissions" className="underline font-semibold hover:text-gold-400 transition-colors">
             Register Now
           </Link>
@@ -43,7 +43,7 @@ export function Navbar() {
         </div>
 
         <nav className="section-container flex items-center justify-between h-16">
-          {/* Logo */}
+          {/*  */}
           <Link href="/" className="flex items-center gap-3 group" aria-label="Tovernax Academy Home">
             <div className="w-10 h-10 rounded-xl flex items-center justify-center text-white font-bold text-lg shadow-glow transition-transform group-hover:scale-105"
               style={{ background: "linear-gradient(135deg, #1a27e1 0%, #3d57ff 100%)" }}>
