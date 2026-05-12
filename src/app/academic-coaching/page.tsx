@@ -46,7 +46,7 @@ export default function AcademicCoachingPage() {
             {features.map((f, i) => (
               <div key={f.title} className="card-premium p-6 reveal" style={{ transitionDelay: `${i * 60}ms` }}>
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl bg-navy-50 mb-4">{f.icon}</div>
-                <h3 className="font-semibold text-navy-950 mb-2">{f.title}</h3>
+                <h3 className="font-semibold text-navy-750 mb-2">{f.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
               </div>
             ))}
@@ -59,12 +59,12 @@ export default function AcademicCoachingPage() {
         <div className="section-container">
           <div className="text-center mb-12 reveal">
             <div className="section-label mb-4">Subjects & Classes</div>
-            <h2 className="font-display text-4xl font-bold text-navy-950">Complete Coverage, Every Grade</h2>
+            <h2 className="font-display text-4xl font-bold text-navy-750">Complete Coverage, Every Grade</h2>
           </div>
           <div className="grid sm:grid-cols-2 gap-5">
             {subjects.map((s, i) => (
               <div key={s.class} className="card-premium p-6 reveal" style={{ transitionDelay: `${i * 60}ms` }}>
-                <h3 className="font-display font-bold text-lg text-navy-950 mb-4">{s.class}</h3>
+                <h3 className="font-display font-bold text-lg text-navy-750 mb-4">{s.class}</h3>
                 <div className="flex flex-wrap gap-2">
                   {s.subjects.map((sub) => (
                     <span key={sub} className="text-sm px-3 py-1.5 rounded-lg bg-navy-50 text-navy-700 font-medium">{sub}</span>
