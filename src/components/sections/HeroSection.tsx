@@ -19,12 +19,16 @@ export function HeroSection() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left content */}
           <div>
-            {/* Legion badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-8 animate-fade-in"
-              style={{ background: "rgba(245, 184, 0, 0.12)", color: "#ffd624", border: "1px solid rgba(245, 184, 0, 0.2)" }}>
-              <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
-              A Tovernax Legion Institution
-            </div>
+            {/* Logo + Legion badge */}
+<div className="flex items-center gap-4 mb-8 animate-fade-in">
+  <img src="/logo.png" alt="Tovernax Legion" className="h-16 w-auto" />
+  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold"
+    style={{ background: "rgba(245, 184, 0, 0.12)", color: "#ffd624", border: "1px solid rgba(245, 184, 0, 0.2)" }}>
+    <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
+    A Tovernax Legion Institution
+  </div>
+</div>
+
 
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-up">
               Shape Your{" "}
