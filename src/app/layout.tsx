@@ -195,9 +195,11 @@ export function HeroSection() {
                 {/* Progress bars — Class 8, 9, 10 */}
                 <div className="space-y-5 mb-8">
                   {[
+                    { label: "Class 6",  percent: 100,  color: "#f5b800" },
+                    { label: "Class 7",  percent: 100,  color: "#f5b800" },
                     { label: "Class 8",  percent: 100,  color: "#f5b800" },
                     { label: "Class 9",  percent: 100,  color: "#f5b800" },
-                    { label: "Class 10", percent: 100, color: "#10b981" },
+                    { label: "Class 10", percent: 98, color: "#10b981" },
                   ].map((item) => (
                     <div key={item.label}>
                       <div className="flex justify-between text-sm mb-2">
