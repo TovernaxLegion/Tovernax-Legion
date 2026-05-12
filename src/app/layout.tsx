@@ -31,7 +31,38 @@ export function HeroSection() {
 
           {/* ── LEFT CONTENT ── */}
           <div>
-            {/* Redundant Logo/Tagline section removed here to match your clean layout */}
+
+            {/* Logo + Academy Name + Legion tagline */}
+            <div className="flex items-center gap-5 mb-10 animate-fade-in">
+              {/* Logo mark */}
+              <div
+                className="w-20 h-20 rounded-2xl flex items-center justify-center font-display font-bold text-4xl text-white flex-shrink-0 shadow-glow"
+                style={{
+                  background: "linear-gradient(135deg, #1a27e1 0%, #3d57ff 60%, #6380ff 100%)",
+                  boxShadow: "0 0 32px rgba(61, 87, 255, 0.5)",
+                }}
+              >
+                T
+              </div>
+
+              {/* Name + tagline stack */}
+              <div>
+                <div
+                  className="font-display text-3xl font-bold leading-tight"
+                  style={{
+                    background: "linear-gradient(135deg, #ffd624 0%, #f5b800 60%, #d98e00 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
+                  Tovernax Academy
+                </div>
+                <div className="text-sm font-medium mt-1" style={{ color: "rgba(255,255,255,0.55)" }}>
+                  A Unit of Tovernax Legion
+                </div>
+              </div>
+            </div>
 
             {/* Headline */}
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-up"
@@ -217,9 +248,9 @@ export function HeroSection() {
                   }}
                 >
                   {[
-                    { label: "Seats Left",  value: "47" },
-                    { label: "Start Date",  value: "Jun 1" },
-                    { label: "Duration",    value: "2 Yrs" },
+                    { label: "Seats Left",  value: "Limited to 15 for each class" },
+                    { label: "Start Date",  value: "July 1" },
+                    { label: "Duration",    value: "Each Academic Year" },
                   ].map((info) => (
                     <div key={info.label} className="text-center">
                       <div
