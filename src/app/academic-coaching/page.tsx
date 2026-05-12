@@ -30,7 +30,8 @@ export default function AcademicCoachingPage() {
         label="Academic Coaching"
         title="Master Every Subject,"
         highlight="Ace Every Exam"
-        description="Personalized, concept-driven academic coaching for Class 6 to 12. We don't just prepare students for exams — we build lifelong learners."
+        description="Personalized, concept-driven academic coaching for Class 6 to 12. 
+        We don't just prepare students for exams — we build lifelong learners."
         emoji="📚"
       />
 
@@ -39,7 +40,7 @@ export default function AcademicCoachingPage() {
         <div className="section-container">
           <div className="text-center mb-12 reveal">
             <div className="section-label mb-4">How We Coach</div>
-            <h2 className="font-display text-4xl font-bold text-navy-950">The Tovernax Coaching Method</h2>
+            <h2 className="font-display text-4xl font-bold text-navy-750">The Tovernax Coaching Method</h2>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {features.map((f, i) => (
