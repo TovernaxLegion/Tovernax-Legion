@@ -17,7 +17,7 @@ export const SITE = {
     twitter: "https://twitter.com/tovernaxacademy",
     facebook: "https://facebook.com/tovernaxacademy",
     telegram: "https://t.me/tovernaxacademy",
-    whatsapp: "https://wa.me/919876543210",
+    whatsapp: "https://wa.me/919597078806",
   },
 };
 
