@@ -20,15 +20,23 @@ export function HeroSection() {
           {/* Left content */}
           <div>
             {/* Logo + Legion badge */}
-<div className="flex items-center gap-4 mb-8 animate-fade-in">
-  <img src="/logo.png" alt="Tovernax Legion" className="h-16 w-auto" />
-  <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold"
-    style={{ background: "rgba(245, 184, 0, 0.12)", color: "#ffd624", border: "1px solid rgba(245, 184, 0, 0.2)" }}>
-    <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
-    A Tovernax Legion Institution
-  </div>
-</div>
-
+            <div className="flex items-center gap-4 mb-8 animate-fade-in">
+              <img src="/logo.png" alt="Tovernax Legion" className="h-16 w-auto" />
+              <span className="font-display text-2xl font-bold"
+                style={{
+                  background: "linear-gradient(135deg, #ffd624 0%, #f5b800 50%, #d98e00 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text"
+                }}>
+                Tovernax Legion
+              </span>
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold"
+                style={{ background: "rgba(245, 184, 0, 0.12)", color: "#ffd624", border: "1px solid rgba(245, 184, 0, 0.2)" }}>
+                <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
+                Legion
+              </div>
+            </div>
 
             <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 animate-fade-up">
               Shape Your{" "}
