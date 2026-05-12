@@ -1,0 +1,164 @@
+import { Metadata } from "next";
+import Link from "next/link";
+import { PageHero } from "@/components/ui/PageHero";
+
+export const metadata: Metadata = {
+  title: "Admissions",
+  description: "Apply to Tovernax Academy — admissions are open for all programs. Learn about our admission process, eligibility, and scholarship opportunities.",
+};
+
+export default function AdmissionsPage() {
+  const steps = [
+    { step: "01", icon: "📝", title: "Fill Application", desc: "Complete the online admission form with your academic details and program preference." },
+    { step: "02", icon: "📞", title: "Counseling Call", desc: "Our expert counselor will connect within 24 hours to understand your goals and guide you." },
+    { step: "03", icon: "📋", title: "Diagnostic Test", desc: "A short diagnostic assessment to place you in the right batch for your level." },
+    { step: "04", icon: "✅", title: "Enroll & Begin", desc: "Complete enrollment, receive your study materials, and start your journey to excellence." },
+  ];
+
+  const programs = [
+    { name: "JEE Preparation", duration: "1–2 Years", mode: "Hybrid / Online", fee: "₹45,000/yr" },
+    { name: "NEET Preparation", duration: "1–2 Years", mode: "Hybrid / Online", fee: "₹42,000/yr" },
+    { name: "UPSC Foundation", duration: "1 Year", mode: "Online + Offline", fee: "₹38,000/yr" },
+    { name: "Class X Excellence", duration: "1 Year", mode: "All Modes", fee: "₹28,000/yr" },
+    { name: "Class XII Science", duration: "1 Year", mode: "All Modes", fee: "₹35,000/yr" },
+    { name: "Banking & SSC", duration: "6 Months", mode: "Online", fee: "₹18,000" },
+  ];
+
+  return (
+    <div>
+      <PageHero
+        label="Admissions 2025–26"
+        title="Your Journey to"
+        highlight="Excellence Starts Here"
+        description="Applications are now open for the 2025–26 academic year. Join thousands of students who have transformed their futures with Tovernax Academy."
+        emoji="🎓"
+      />
+
+      {/* Process */}
+      <section className="section-padding bg-white">
+        <div className="section-container">
+          <div className="text-center mb-12 reveal">
+            <div className="section-label mb-4">How to Apply</div>
+            <h2 className="font-display text-4xl font-bold text-navy-950">Simple 4-Step Process</h2>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {steps.map((s, i) => (
+              <div key={s.step} className="card-premium p-6 text-center reveal" style={{ transitionDelay: `${i * 80}ms` }}>
+                <div className="text-3xl mb-3">{s.icon}</div>
+                <div className="text-xs font-mono font-bold text-navy-400 mb-2">{s.step}</div>
+                <h3 className="font-semibold text-navy-950 mb-2">{s.title}</h3>
+                <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Program Fees */}
+      <section className="section-padding bg-mesh">
+        <div className="section-container">
+          <div className="text-center mb-12 reveal">
+            <div className="section-label mb-4">Fee Structure</div>
+            <h2 className="font-display text-4xl font-bold text-navy-950">Transparent Pricing</h2>
+            <p className="text-gray-500 mt-3">Flexible EMI options available. Scholarships for meritorious students.</p>
+          </div>
+          <div className="max-w-3xl mx-auto">
+            <div className="card-premium overflow-hidden reveal">
+              <table className="w-full">
+                <thead>
+                  <tr className="bg-navy-950 text-white">
+                    <th className="px-6 py-4 text-left text-sm font-semibold">Program</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold">Duration</th>
+                    <th className="px-6 py-4 text-left text-sm font-semibold">Mode</th>
+                    <th className="px-6 py-4 text-right text-sm font-semibold">Fee</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {programs.map((p, i) => (
+                    <tr key={p.name} className={i % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                      <td className="px-6 py-4 font-medium text-navy-900 text-sm">{p.name}</td>
+                      <td className="px-6 py-4 text-gray-500 text-sm">{p.duration}</td>
+                      <td className="px-6 py-4 text-gray-500 text-sm">{p.mode}</td>
+                      <td className="px-6 py-4 text-right font-bold text-navy-700 text-sm">{p.fee}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-center text-gray-400 text-sm mt-4">* Fees are indicative. Contact us for exact pricing and available scholarships.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Application Form */}
+      <section className="section-padding bg-white">
+        <div className="section-container">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-10 reveal">
+              <div className="section-label mb-4">Apply Now</div>
+              <h2 className="font-display text-4xl font-bold text-navy-950">Register Your Interest</h2>
+            </div>
+            <div className="card-premium p-8 reveal">
+              <div className="grid sm:grid-cols-2 gap-5">
+                <div>
+                  <label className="block text-sm font-semibold text-navy-900 mb-2">Full Name *</label>
+                  <input type="text" placeholder="Student's full name" className="input-field" />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-navy-900 mb-2">Class / Year *</label>
+                  <select className="input-field">
+                    <option value="">Select class</option>
+                    {["Class 6", "Class 7", "Class 8", "Class 9", "Class 10", "Class 11", "Class 12", "Appeared 12th", "Graduate"].map(c => (
+                      <option key={c}>{c}</option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-navy-900 mb-2">Mobile Number *</label>
+                  <input type="tel" placeholder="+91 98765 43210" className="input-field" />
+                </div>
+                <div>
+                  <label className="block text-sm font-semibold text-navy-900 mb-2">Email Address</label>
+                  <input type="email" placeholder="email@example.com" className="input-field" />
+                </div>
+                <div className="sm:col-span-2">
+                  <label className="block text-sm font-semibold text-navy-900 mb-2">Program of Interest *</label>
+                  <select className="input-field">
+                    <option value="">Select a program</option>
+                    {["JEE Preparation", "NEET Preparation", "UPSC Foundation", "Class X Excellence", "Class XII Science", "Banking & SSC", "Academic Coaching", "Other"].map(p => (
+                      <option key={p}>{p}</option>
+                    ))}
+                  </select>
+                </div>
+                <div className="sm:col-span-2">
+                  <label className="block text-sm font-semibold text-navy-900 mb-2">Preferred Learning Mode</label>
+                  <div className="flex flex-wrap gap-3">
+                    {["Online", "Offline", "Hybrid"].map(mode => (
+                      <label key={mode} className="flex items-center gap-2 cursor-pointer">
+                        <input type="radio" name="mode" value={mode} className="accent-navy-600" />
+                        <span className="text-sm font-medium text-gray-700">{mode}</span>
+                      </label>
+                    ))}
+                  </div>
+                </div>
+                <div className="sm:col-span-2">
+                  <label className="block text-sm font-semibold text-navy-900 mb-2">Additional Message</label>
+                  <textarea rows={3} placeholder="Any specific requirements or questions..." className="input-field resize-none" />
+                </div>
+                <div className="sm:col-span-2">
+                  <button className="btn-primary w-full justify-center text-base">
+                    Submit Application
+                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </button>
+                  <p className="text-center text-gray-400 text-xs mt-3">We'll reach out within 24 hours. No spam, ever.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
