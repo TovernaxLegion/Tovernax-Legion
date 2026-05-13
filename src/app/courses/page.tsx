@@ -20,7 +20,7 @@ export default function CoursesPage() {
   return (
     <div className="pt-6">
       {/* Hero */}
-      <section className="section-padding relative overflow-hidden"
+       <section className="pt-16 pb-24 relative overflow-hidden"
         style={{ background: "linear-gradient(135deg, #f0f3ff 0%, #e8ecff 50%, #dde3ff 100%)" }}>
         <div className="absolute inset-0 bg-grid opacity-10" />
         <div className="section-container relative z-10 text-center">
