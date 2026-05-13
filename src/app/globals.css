@@ -65,4 +65,21 @@ body {
 .animate-red-blue {
   animation: red-blue 3s ease-in-out infinite;
 }
+  @keyframes flash-gold {
+  0%, 100% { background: rgba(255, 214, 36, 0.15); color: #ffd624; border: 1px solid rgba(255, 214, 36, 0.4); }
+  50% { background: rgba(255, 214, 36, 0.3); color: #d98e00; border: 1px solid rgba(255, 214, 36, 0.7); }
+}
+
+.animate-flash-gold {
+  animation: flash-gold 1.5s ease-in-out infinite;
+}
+
+@keyframes flash-red {
+  0%, 100% { background: rgba(220, 38, 38, 0.1); color: #dc2626; border: 1px solid rgba(220, 38, 38, 0.3); }
+  50% { background: rgba(220, 38, 38, 0.2); color: #991b1b; border: 1px solid rgba(220, 38, 38, 0.6); }
+}
+
+.animate-flash-red {
+  animation: flash-red 1.5s ease-in-out infinite;
+}
 }
