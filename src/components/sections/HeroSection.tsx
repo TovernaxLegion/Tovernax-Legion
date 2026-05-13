@@ -59,9 +59,24 @@ export function HeroSection() {
               tomorrow's leaders.
             </p>
 
-            {/* CTA Buttons */}
+          {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-8 animate-fade-up animate-delay-300">
-              <Link href="/admissions" className="btn-gold text-base px-8 py-3">
+              <Link
+                href="/admissions"
+                className="inline-flex items-center gap-2 px-8 py-3 rounded-xl font-semibold text-base transition-all duration-300"
+                style={{
+                  color: "#ffd624",
+                  border: "2px solid rgba(255, 214, 36, 0.35)",
+                }}
+                onMouseEnter={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,214,36,0.7)";
+                  (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,214,36,0.06)";
+                }}
+                onMouseLeave={(e) => {
+                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,214,36,0.35)";
+                  (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+                }}
+              >
                 Start Your Journey
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
