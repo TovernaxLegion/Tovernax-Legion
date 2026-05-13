@@ -86,10 +86,10 @@ export const FOOTER_LINKS = {
 };
 
 export const STATS = [
-  { value: "10,000+", label: "Students Enrolled", icon: "👨‍🎓" },
+  { value: "500+", label: "Students Enrolled", icon: "👨‍🎓" },
   { value: "98%", label: "Success Rate", icon: "📈" },
-  { value: "150+", label: "Expert Faculty", icon: "👩‍🏫" },
-  { value: "25+", label: "Programs Offered", icon: "📚" },
+  { value: "35+", label: "Expert Faculty", icon: "👩‍🏫" },
+  { value: "50+", label: "Programs Offered", icon: "📚" },
 ];
 
 export const EXAM_CATEGORIES = [
@@ -103,7 +103,7 @@ export const EXAM_CATEGORIES = [
   },
   {
     category: "Civil Services",
-    exams: ["UPSC CSE", "GPSC", "MPSC", "State PSC"],
+    exams: ["UPSC CSE", "GPSC", "RAILWAY", "State PSC" , "State Level other exams - Polic and Security Forces],
   },
   {
     category: "Commerce & Management",
@@ -115,7 +115,7 @@ export const EXAM_CATEGORIES = [
   },
   {
     category: "Defence",
-    exams: ["NDA", "CDS", "AFCAT", "Coast Guard"],
+    exams: ["CDS", "AFCAT", "NDA", "DEFENCE NON-TECHNICAL ENTRY", "DEFENCE TECHNICAL ENTRY", "Coast Guard"],
   },
 ];
 
