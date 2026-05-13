@@ -82,4 +82,13 @@ body {
 .animate-flash-red {
   animation: flash-red 1.5s ease-in-out infinite;
 }
+  @keyframes flash-whatsapp {
+  0%, 100% { background: rgba(16, 185, 129, 0.15); color: #10b981; border: 2px solid rgba(16, 185, 129, 0.4); }
+  50% { background: rgba(16, 185, 129, 0.35); color: #34d399; border: 2px solid rgba(16, 185, 129, 0.8); text-shadow: 0 0 12px rgba(16, 185, 129, 0.6); }
+}
+
+.animate-flash-whatsapp {
+  animation: flash-whatsapp 1.5s ease-in-out infinite;
+  font-weight: 700;
+}
 }
