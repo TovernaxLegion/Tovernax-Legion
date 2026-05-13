@@ -29,10 +29,24 @@ export function HeroSection() {
       <div className="section-container relative z-10 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
-          {/* ── LEFT CONTENT ── */}
+        {/* ── LEFT CONTENT ── */}
           <div>
-            
-          {/* Flashing Banner */}
+
+            {/* Reserve Seat + Contact Strip */}
+            <div className="flex flex-wrap items-center gap-3 mb-5 animate-fade-up">
+              <Link href="/admissions" className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-base text-white transition-all duration-300"
+                style={{ background: "linear-gradient(135deg, #1a27e1, #3d57ff)" }}>
+                Reserve Seat →
+              </Link>
+              <a href="tel:9597078806" className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl font-bold text-sm animate-flash-gold">
+                📞 9597078806
+              </a>
+              <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl font-bold text-sm animate-flash-red">
+                💬 WhatsApp: 9597078806
+              </a>
+            </div>
+
+            {/* Flashing Banner */}
             <div className="mb-4 animate-fade-up">
               <div
                 className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold"
@@ -44,7 +58,7 @@ export function HeroSection() {
                 }}
               >
                 <span className="text-base">⚡</span>
-                WE COVER SYLLABUS & PREPARE STUDENTS FOR COMPETITIVE EXAMS ALSO
+                We cover syllabus and prepare students for competitive exams
                 <span className="text-base">⚡</span>
               </div>
             </div>
@@ -72,11 +86,11 @@ export function HeroSection() {
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
               Tovernax Academy blends academic excellence with competitive exam mastery — through
-              personalized coaching, hybrid learning and expert mentorship designed for
+              personalized coaching, hybrid learning, and expert mentorship designed for
               tomorrow's leaders.
             </p>
 
-          {/* CTA Buttons */}
+            {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mb-8 animate-fade-up animate-delay-300">
               <Link
                 href="/admissions"
