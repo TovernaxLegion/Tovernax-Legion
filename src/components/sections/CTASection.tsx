@@ -26,7 +26,7 @@ export function CTASection() {
             {" "}Starts Here
           </h2>
           <p className="text-lg leading-relaxed mb-12 max-w-2xl mx-auto" style={{ color: "#1a27e1" }}>
-            Applications are now open for the 2026–27 academic year. Join thousands of students who have transformed their futures with Tovernax Academy.
+            Applications are now open for the 2026–27 academic year. Join hundreds of students who have transformed their futures with Tovernax Academy.
           </p>
 
           {/* Action area */}
@@ -48,9 +48,9 @@ export function CTASection() {
           <div className="flex flex-wrap justify-center gap-8 text-sm" style={{ color: "#1a27e1" }}>
             {[
               "✅ Free first counseling session",
-              "✅ Flexible EMI options",
+              "✅ Flexible Payment options",
               "✅ Scholarship tests available",
-              "✅ Cancel anytime",
+              "✅ Student Aptitude Test",
             ].map((item) => (
               <span key={item} className="font-medium">{item}</span>
             ))}
