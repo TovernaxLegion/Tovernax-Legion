@@ -29,4 +29,13 @@ body {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.5; }
 }
+  @keyframes tricolor {
+  0%, 33% { color: #ffd624; }
+  34%, 66% { color: #00bfff; }
+  67%, 100% { color: #ffffff; }
+}
+
+.animate-tricolor {
+  animation: tricolor 3s ease-in-out infinite;
+}
 }
