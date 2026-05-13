@@ -87,9 +87,12 @@ export function VisionMissionSection() {
                 ))}
               </div>
 
-              {/* Closing Statement */}
-              <div className="mt-8 pt-6 border-t border-white/10">
-                <p className="text-sm italic leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
+                            {/* Closing Statement */}
+              <div className="mt-8 pt-6 border-t border-white/10 text-center">
+                <p
+                  className="text-base font-bold italic leading-relaxed animate-tricolor"
+                  style={{ color: "#ffd624" }}
+                >
                   "TOVERNAX is not just a brand — it is a disciplined ecosystem built on principles that inspire growth, leadership, and lasting impact."
                 </p>
               </div>
