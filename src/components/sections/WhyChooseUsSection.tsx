@@ -39,14 +39,14 @@ export function WhyChooseUsSection() {
           ))}
         </div>
 
-      {/* Bottom CTA strip */}
-        <div className="mt-16 p-8 rounded-3xl text-center reveal"
-          style={{ background: "linear-gradient(135deg, #f0f3ff 0%, #e8ecff 100%)", border: "1px solid rgba(29,53,220,0.08)" }}>
-          <p className="text-navy-800 font-semibold text-lg mb-2">
+             {/* Bottom CTA strip */}
+        <div className="mt-16 p-10 rounded-3xl text-center reveal"
+          style={{ background: "linear-gradient(135deg, #0a1560 0%, #1a27e1 100%)", border: "1px solid rgba(255,214,36,0.2)" }}>
+          <p className="text-white font-bold text-xl mb-2">
             Ready to experience the Tovernax difference?
           </p>
-          <p className="text-gray-500 text-sm mb-6">Book a free counseling session today — no commitment required.</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <p className="text-gray-300 text-base mb-8">Book a free counseling session today — no commitment required.</p>
+          <div className="flex flex-col sm:flex-row gap-5 justify-center">
             <a href="/contact" className="inline-flex items-center gap-2 px-10 py-5 rounded-2xl font-bold text-lg text-white animate-red-blue">
               Book Free Session
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -58,7 +58,6 @@ export function WhyChooseUsSection() {
             </a>
           </div>
         </div>
-
       </div>
     </section>
   );
