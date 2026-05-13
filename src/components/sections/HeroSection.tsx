@@ -233,7 +233,7 @@ export function HeroSection() {
                   }}
                 >
                   {[
-                    { label: "Seats Left",  value: "15 only for each class " },
+                    { label: "Seats Left",  value: "15 Only for Each Batch " },
                     { label: "Start Date",  value: "July 1" },
                     { label: "Duration",    value: "1 Yr" },
                   ].map((info) => (
