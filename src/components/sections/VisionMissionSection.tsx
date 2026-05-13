@@ -59,28 +59,39 @@ export function VisionMissionSection() {
               </div>
               <h3 className="font-display text-3xl font-bold mb-8">
                 The Pillars of{" "}
-                <span style={{ color: "#ffd624" }}>Tovernax</span>
+                <span style={{ color: "#ffd624" }}>Tovernax Academy</span>
               </h3>
 
-              <div className="space-y-5">
+              <div className="space-y-4">
                 {[
-                  { value: "Excellence", desc: "Uncompromising standards in every aspect of education and student experience.", icon: "⭐", num: "01" },
-                  { value: "Integrity", desc: "Honest, transparent, and ethical practices in all our interactions.", icon: "🛡️", num: "02" },
-                  { value: "Innovation", desc: "Embracing new teaching methods, technologies, and pedagogical advances.", icon: "💡", num: "03" },
-                  { value: "Empathy", desc: "Understanding each student's unique journey and supporting their growth.", icon: "🤝", num: "04" },
-                  { value: "Impact", desc: "Measuring success not just by scores, but by the lives we transform.", icon: "🚀", num: "05" },
+                  { value: "Trust", desc: "The unwavering foundation built through honesty, consistency, and responsible action.", icon: "🤝", num: "01" },
+                  { value: "Responsibility", desc: "The commitment to act with accountability toward people, society, and the future.", icon: "⚖️", num: "02" },
+                  { value: "Unity", desc: "The strength created when diverse minds work together with shared purpose and respect.", icon: "🔗", num: "03" },
+                  { value: "Purpose", desc: "The clear reason behind every action, driving meaningful impact and lasting value.", icon: "🎯", num: "04" },
+                  { value: "Timeless", desc: "The pursuit of principles and systems that remain relevant across generations.", icon: "⏳", num: "05" },
+                  { value: "Integrity", desc: "The courage to uphold truth, ethics, and transparency in every circumstance.", icon: "🛡️", num: "06" },
+                  { value: "Excellence", desc: "The relentless pursuit of the highest standards in thought, action, and results.", icon: "⭐", num: "07" },
+                  { value: "Vision", desc: "The ability to see beyond the present and shape a better future with clarity and innovation.", icon: "🔭", num: "08" },
+                  { value: "Ambition", desc: "The determination to grow, evolve, and achieve extraordinary possibilities without limits.", icon: "🚀", num: "09" },
                 ].map((v) => (
-                  <div key={v.value} className="flex items-start gap-4 p-4 rounded-xl transition-colors hover:bg-white/5 group">
+                  <div key={v.value} className="flex items-start gap-4 p-3 rounded-xl transition-colors hover:bg-white/5 group">
                     <div className="flex items-center gap-3 flex-shrink-0">
                       <span className="text-xs font-mono text-gray-500">{v.num}</span>
                       <span className="text-xl">{v.icon}</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-white mb-1 group-hover:text-gold-400 transition-colors">{v.value}</div>
+                      <div className="font-semibold text-white mb-0.5 group-hover:text-gold-400 transition-colors">{v.value}</div>
                       <div className="text-gray-400 text-sm leading-relaxed">{v.desc}</div>
                     </div>
                   </div>
                 ))}
+              </div>
+
+              {/* Closing Statement */}
+              <div className="mt-8 pt-6 border-t border-white/10">
+                <p className="text-sm italic leading-relaxed" style={{ color: "rgba(255,255,255,0.7)" }}>
+                  "TOVERNAX is not just a brand — it is a disciplined ecosystem built on principles that inspire growth, leadership, and lasting impact."
+                </p>
               </div>
             </div>
           </div>
