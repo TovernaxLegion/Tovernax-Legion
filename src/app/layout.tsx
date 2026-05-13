@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Tovernax Academy",
   description: "Tovernax Academy - Learning Platform",
   icons: {
-    icon: "/favicon.svg",
+        icon: "/logo.png",
   },
 };
 
