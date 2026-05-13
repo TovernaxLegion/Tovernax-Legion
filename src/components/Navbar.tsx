@@ -60,6 +60,12 @@ export default function Navbar() {
               Hybrid Learning
             </Link>
             <Link
+              href="/counseling"
+              className="text-white hover:text-yellow-400 font-medium transition-colors"
+            >
+              Counseling
+            </Link>
+            <Link
               href="/contact"
               className="text-white hover:text-yellow-400 font-medium transition-colors"
             >
@@ -144,6 +150,13 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Hybrid Learning
+            </Link>
+            <Link
+              href="/counseling"
+              className="block py-2 text-white hover:text-yellow-400 font-medium"
+              onClick={() => setIsOpen(false)}
+            >
+              Counseling
             </Link>
             <Link
               href="/contact"
