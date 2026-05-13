@@ -8,13 +8,13 @@ export const metadata: Metadata = {
 };
 
 export default function CoursesPage() {
-  const categoryColors: Record<string, { bg: string; border: string; header: string; tag: string }> = {
-    "Engineering": { bg: "linear-gradient(135deg, #1a27e1, #3d57ff)", border: "rgba(61,87,255,0.3)", header: "#1a27e1", tag: "rgba(26,39,225,0.1)" },
-    "Medical": { bg: "linear-gradient(135deg, #10b981, #34d399)", border: "rgba(16,185,129,0.3)", header: "#10b981", tag: "rgba(16,185,129,0.1)" },
-    "Civil Services": { bg: "linear-gradient(135deg, #f5b800, #ffd624)", border: "rgba(245,184,0,0.3)", header: "#d98e00", tag: "rgba(245,184,0,0.1)" },
-    "Commerce & Management": { bg: "linear-gradient(135deg, #8b5cf6, #a78bfa)", border: "rgba(139,92,246,0.3)", header: "#8b5cf6", tag: "rgba(139,92,246,0.1)" },
-    "Banking & Finance": { bg: "linear-gradient(135deg, #ec4899, #f472b6)", border: "rgba(236,72,153,0.3)", header: "#ec4899", tag: "rgba(236,72,153,0.1)" },
-    "Defence": { bg: "linear-gradient(135deg, #dc2626, #f87171)", border: "rgba(220,38,38,0.3)", header: "#dc2626", tag: "rgba(220,38,38,0.1)" },
+  const categoryColors: Record<string, { bg: string; header: string; tag: string }> = {
+    "Engineering": { bg: "linear-gradient(135deg, #1a27e1, #3d57ff)", header: "#1a27e1", tag: "rgba(26,39,225,0.1)" },
+    "Medical": { bg: "linear-gradient(135deg, #10b981, #34d399)", header: "#10b981", tag: "rgba(16,185,129,0.1)" },
+    "Civil Services": { bg: "linear-gradient(135deg, #f5b800, #ffd624)", header: "#d98e00", tag: "rgba(245,184,0,0.1)" },
+    "Commerce & Management": { bg: "linear-gradient(135deg, #8b5cf6, #a78bfa)", header: "#8b5cf6", tag: "rgba(139,92,246,0.1)" },
+    "Banking & Finance": { bg: "linear-gradient(135deg, #ec4899, #f472b6)", header: "#ec4899", tag: "rgba(236,72,153,0.1)" },
+    "Defence": { bg: "linear-gradient(135deg, #dc2626, #f87171)", header: "#dc2626", tag: "rgba(220,38,38,0.1)" },
   };
 
   return (
@@ -92,27 +92,32 @@ export default function CoursesPage() {
         </div>
       </section>
 
-      {/* Exam Categories */}
-      <section className="section-padding" style={{ background: "linear-gradient(135deg, #0a1560 0%, #1a27e1 100%)" }}>
+      {/* Exam Categories - Separate Section */}
+      <section className="pt-28 pb-20" style={{ background: "linear-gradient(135deg, #0a1560 0%, #1a27e1 50%, #2034f5 100%)" }}>
         <div className="section-container">
-          <div className="text-center mb-12 reveal">
-            <div className="section-label mb-4" style={{ background: "rgba(255,255,255,0.1)", color: "white", borderColor: "rgba(255,255,255,0.15)" }}>Exam Coverage</div>
-            <h2 className="font-display text-4xl font-bold text-white">All Major Exams Covered</h2>
+          <div className="text-center mb-14 reveal">
+            <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full text-sm font-bold mb-6"
+              style={{ background: "rgba(255,255,255,0.1)", color: "white", border: "1px solid rgba(255,255,255,0.15)" }}>
+              Exam Coverage
+            </div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">All Major Exams Covered</h2>
+            <p className="text-blue-200 text-lg max-w-2xl mx-auto">Comprehensive preparation for every competitive exam across India</p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {EXAM_CATEGORIES.map((cat, i) => {
-              const colors = categoryColors[cat.category] || { bg: "linear-gradient(135deg, #6366f1, #818cf8)", border: "rgba(99,102,241,0.3)", header: "#6366f1", tag: "rgba(99,102,241,0.1)" };
+              const colors = categoryColors[cat.category] || { bg: "linear-gradient(135deg, #6366f1, #818cf8)", header: "#6366f1", tag: "rgba(99,102,241,0.1)" };
               return (
-                <div key={cat.category} className="rounded-2xl overflow-hidden shadow-xl reveal" style={{ transitionDelay: `${i * 60}ms` }}>
-                  <div className="p-5" style={{ background: colors.bg }}>
-                    <h3 className="font-bold text-white text-lg">{cat.category}</h3>
-                  </div>
-                  <div className="p-5" style={{ background: "white" }}>
-                    <div className="flex flex-wrap gap-2">
-                      {cat.exams.map((exam) => (
-                        <span key={exam} className="text-xs px-3 py-1.5 rounded-lg font-semibold" style={{ background: colors.tag, color: colors.header }}>{exam}</span>
-                      ))}
+                <div key={cat.category} className="rounded-2xl overflow-hidden shadow-2xl reveal" style={{ transitionDelay: `${i * 80}ms`, minHeight: "280px", display: "flex", flexDirection: "column" }}>
+                  <div className="p-6 flex items-center gap-3" style={{ background: colors.bg }}>
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style={{ background: "rgba(255,255,255,0.2)" }}>
+                      {cat.category === "Engineering" ? "⚙️" : cat.category === "Medical" ? "🏥" : cat.category === "Civil Services" ? "🏛️" : cat.category === "Commerce & Management" ? "💼" : cat.category === "Banking & Finance" ? "🏦" : cat.category === "Defence" ? "🛡️" : "📚"}
                     </div>
+                    <h3 className="font-bold text-white text-xl">{cat.category}</h3>
+                  </div>
+                  <div className="p-6 flex-1 flex flex-wrap content-start gap-2" style={{ background: "white" }}>
+                    {cat.exams.map((exam) => (
+                      <span key={exam} className="text-sm px-4 py-2 rounded-xl font-semibold" style={{ background: colors.tag, color: colors.header, border: `1px solid ${colors.header}22` }}>{exam}</span>
+                    ))}
                   </div>
                 </div>
               );
@@ -122,15 +127,15 @@ export default function CoursesPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding" style={{ background: "linear-gradient(135deg, #f0f3ff 0%, #dde3ff 100%)" }}>
+      <section className="pt-28 pb-20" style={{ background: "linear-gradient(135deg, #f0f3ff 0%, #dde3ff 100%)" }}>
         <div className="section-container text-center reveal">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4" style={{ color: "#0a1560" }}>
             Not Sure Which Course is Right for You?
           </h2>
-          <p className="text-lg mb-8 max-w-xl mx-auto" style={{ color: "#1a27e1" }}>
+          <p className="text-lg mb-10 max-w-xl mx-auto" style={{ color: "#1a27e1" }}>
             Our expert counselors will help you identify the perfect program based on your goals, current level, and target.
           </p>
-          <Link href="/contact" className="inline-block px-12 py-5 rounded-2xl font-bold text-2xl text-white animate-tricolor-cta">
+          <Link href="/contact" className="inline-block px-14 py-6 rounded-2xl font-bold text-2xl text-white animate-gold-blue-cta">
             Get Free Guidance
           </Link>
         </div>
