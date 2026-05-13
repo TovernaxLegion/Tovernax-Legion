@@ -91,4 +91,14 @@ body {
   animation: flash-whatsapp 1.5s ease-in-out infinite;
   font-weight: 700;
 }
+  @keyframes tricolor-cta {
+  0%, 30% { background: #1a27e1; color: #ffffff; box-shadow: 0 0 20px rgba(26, 39, 225, 0.4); }
+  35%, 63% { background: #ffd624; color: #0a1560; box-shadow: 0 0 20px rgba(255, 214, 36, 0.4); }
+  68%, 96% { background: #ffffff; color: #1a27e1; box-shadow: 0 0 20px rgba(255, 255, 255, 0.4); }
+  97%, 100% { background: #1a27e1; color: #ffffff; box-shadow: 0 0 20px rgba(26, 39, 225, 0.4); }
+}
+
+.animate-tricolor-cta {
+  animation: tricolor-cta 3s ease-in-out infinite;
+}
 }
