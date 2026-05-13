@@ -12,9 +12,12 @@ export default function Navbar() {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex items-center text-xl font-bold text-yellow-400">
+            <Link href="/" className="flex items-center">
               <img src="/logo.png" alt="Logo" className="h-8 w-8 mr-2" />
-              Tovernax Academy
+              <div>
+                <span className="text-xl font-bold text-yellow-400">Tovernax Academy</span>
+                <span className="block text-xs text-yellow-200">A Unit of Tovernax Legion</span>
+              </div>
             </Link>
           </div>
 
