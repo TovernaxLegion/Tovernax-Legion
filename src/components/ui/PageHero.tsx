@@ -8,22 +8,24 @@ interface PageHeroProps {
 
 export function PageHero({ label, title, highlight, description, emoji }: PageHeroProps) {
   return (
-    <section className="pt-24 pb-0 bg-dark-mesh relative overflow-hidden">
-      <div className="absolute inset-0 bg-grid opacity-20" />
-      <div className="section-container relative z-10 py-20 text-center">
-        {emoji && <div className="text-6xl mb-6">{emoji}</div>}
-        <div className="section-label mb-6" style={{ background: "rgba(255,255,255,0.08)", color: "white", borderColor: "rgba(255,255,255,0.12)" }}>
+    <section className="pt-6 pb-0 relative overflow-hidden"
+      style={{ background: "linear-gradient(135deg, #f0f3ff 0%, #e8ecff 50%, #dde3ff 100%)" }}>
+      <div className="absolute inset-0 bg-grid opacity-10" />
+      <div className="section-container relative z-10 py-12 text-center">
+        {emoji && <div className="text-9xl mb-6">{emoji}</div>}
+        <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full text-sm font-bold mb-6"
+          style={{ background: "rgba(26, 39, 225, 0.1)", color: "#1a27e1", border: "1px solid rgba(26, 39, 225, 0.2)" }}>
           {label}
         </div>
-        <h1 className="font-display text-5xl md:text-6xl font-bold text-white mb-6 max-w-3xl mx-auto leading-tight">
+        <h1 className="font-display text-4xl md:text-5xl font-bold mb-6 max-w-3xl mx-auto leading-tight" style={{ color: "#0a1560" }}>
           {title}{" "}
-          {highlight && <span style={{ color: "#ffd624" }}>{highlight}</span>}
+          {highlight && <span style={{ color: "#1a27e1" }}>{highlight}</span>}
         </h1>
-        <p className="text-gray-300 text-xl max-w-2xl mx-auto">{description}</p>
+        <p className="text-lg max-w-2xl mx-auto font-medium" style={{ color: "#1a27e1" }}>{description}</p>
       </div>
       <div className="relative">
-        <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0 60L1440 60V20C1200 40 900 55 600 45C300 35 100 10 0 0V60Z" fill="white" />
+        <svg viewBox="0 0 1440 2" xmlns="http://www.w3.org/2000/svg">
+          <rect width="1440" height="2" fill="white" />
         </svg>
       </div>
     </section>
