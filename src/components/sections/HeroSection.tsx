@@ -6,7 +6,7 @@ import { STATS } from "@/lib/constants";
 export function HeroSection() {
   return (
     <section
-      className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-16"
+      className="relative flex items-center overflow-hidden pt-6 pb-8"
       style={{ background: "linear-gradient(135deg, #020818 0%, #040d2e 40%, #071050 70%, #0a1560 100%)" }}
     >
       {/* Background grid */}
@@ -27,45 +27,13 @@ export function HeroSection() {
       />
 
       <div className="section-container relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
 
           {/* ── LEFT CONTENT ── */}
           <div>
 
-            {/* Logo + Academy Name + Legion tagline */}
-            <div className="flex items-center gap-5 mb-10 animate-fade-in">
-              {/* Logo mark */}
-              <div
-                className="w-20 h-20 rounded-2xl flex items-center justify-center font-display font-bold text-4xl text-white flex-shrink-0 shadow-glow"
-                style={{
-                  background: "linear-gradient(135deg, #1a27e1 0%, #3d57ff 60%, #6380ff 100%)",
-                  boxShadow: "0 0 32px rgba(61, 87, 255, 0.5)",
-                }}
-              >
-                T
-              </div>
-
-              {/* Name + tagline stack */}
-              <div>
-                <div
-                  className="font-display text-3xl font-bold leading-tight"
-                  style={{
-                    background: "linear-gradient(135deg, #ffd624 0%, #f5b800 60%, #d98e00 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
-                  }}
-                >
-                  Tovernax Academy
-                </div>
-                <div className="text-sm font-medium mt-1" style={{ color: "rgba(255,255,255,0.55)" }}>
-                  A Unit of Tovernax Legion
-                </div>
-              </div>
-            </div>
-
             {/* Headline */}
-            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-up"
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 animate-fade-up"
               style={{ color: "#ffffff" }}>
               Shape Your{" "}
               <span
@@ -83,17 +51,17 @@ export function HeroSection() {
 
             {/* Sub-text */}
             <p
-              className="text-lg leading-relaxed mb-10 max-w-xl animate-fade-up animate-delay-200"
+              className="text-base leading-relaxed mb-6 max-w-xl animate-fade-up animate-delay-200"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
               Tovernax Academy blends academic excellence with competitive exam mastery — through
-              personalized coaching, hybrid learning, and expert mentorship designed for
+              personalized coaching, hybrid learning and expert mentorship designed for
               tomorrow's leaders.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 mb-14 animate-fade-up animate-delay-300">
-              <Link href="/admissions" className="btn-gold text-base px-8 py-4">
+            <div className="flex flex-wrap gap-4 mb-8 animate-fade-up animate-delay-300">
+              <Link href="/admissions" className="btn-gold text-base px-8 py-3">
                 Start Your Journey
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -101,7 +69,7 @@ export function HeroSection() {
               </Link>
               <Link
                 href="/courses"
-                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl font-semibold text-base transition-all duration-300"
+                className="inline-flex items-center gap-2 px-8 py-3 rounded-xl font-semibold text-base transition-all duration-300"
                 style={{
                   color: "#ffd624",
                   border: "2px solid rgba(255, 214, 36, 0.35)",
@@ -181,7 +149,7 @@ export function HeroSection() {
                         backgroundClip: "text",
                       }}
                     >
-                      Academic Excellence
+                      Academic and Competitive Excellence
                     </div>
                   </div>
                   <div
@@ -192,15 +160,17 @@ export function HeroSection() {
                   </div>
                 </div>
 
-                {/* Progress bars — Class 8, 9, 10 */}
-                <div className="space-y-5 mb-8">
+                {/* Progress bars — Class 6, 7, 8, 9, 10 */}
+                <div className="space-y-4 mb-8">
                   {[
+                    { label: "Class 6",  percent: 100,  color: "#f5b800" },
+                    { label: "Class 7",  percent: 100,  color: "#f5b800" },
                     { label: "Class 8",  percent: 100,  color: "#f5b800" },
                     { label: "Class 9",  percent: 100,  color: "#f5b800" },
                     { label: "Class 10", percent: 100, color: "#10b981" },
                   ].map((item) => (
                     <div key={item.label}>
-                      <div className="flex justify-between text-sm mb-2">
+                      <div className="flex justify-between text-sm mb-1.5">
                         <span className="font-semibold" style={{ color: "rgba(255,255,255,0.85)" }}>
                           {item.label}
                         </span>
@@ -217,7 +187,7 @@ export function HeroSection() {
                         </span>
                       </div>
                       <div
-                        className="h-2.5 rounded-full overflow-hidden"
+                        className="h-2 rounded-full overflow-hidden"
                         style={{ background: "rgba(255,255,255,0.08)" }}
                       >
                         <div
@@ -248,9 +218,9 @@ export function HeroSection() {
                   }}
                 >
                   {[
-                    { label: "Seats Left",  value: "47" },
-                    { label: "Start Date",  value: "Jun 1" },
-                    { label: "Duration",    value: "2 Yrs" },
+                    { label: "Seats Left",  value: "15 only for each class " },
+                    { label: "Start Date",  value: "July 1" },
+                    { label: "Duration",    value: "1 Yr" },
                   ].map((info) => (
                     <div key={info.label} className="text-center">
                       <div
@@ -274,7 +244,7 @@ export function HeroSection() {
 
               {/* Bottom CTA strip */}
               <div
-                className="px-8 py-5 flex items-center justify-between"
+                className="px-8 py-4 flex items-center justify-between"
                 style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}
               >
                 {/* Avatar stack */}
