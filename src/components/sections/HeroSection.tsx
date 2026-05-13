@@ -44,7 +44,7 @@ export function HeroSection() {
                 }}
               >
                 <span className="text-base">⚡</span>
-                WE COVER SYLLABUS AND  PREPARE STUDENTS FOR COMPETITIVE EXAMS ALSO
+                WE COVER SYLLABUS & PREPARE STUDENTS FOR COMPETITIVE EXAMS ALSO
                 <span className="text-base">⚡</span>
               </div>
             </div>
