@@ -355,14 +355,10 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-
-      {/* Wave separator */}
+      {/* Straight separator */}
       <div className="absolute bottom-0 left-0 right-0">
-        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M0 80L60 70C120 60 240 40 360 35C480 30 600 40 720 45C840 50 960 50 1080 42.5C1200 35 1320 20 1380 12.5L1440 5V80H0Z"
-            fill="white"
-          />
+        <svg viewBox="0 0 1440 2" xmlns="http://www.w3.org/2000/svg">
+          <rect width="1440" height="2" fill="white" />
         </svg>
       </div>
     </section>
