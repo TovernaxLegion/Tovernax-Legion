@@ -110,4 +110,12 @@ body {
 .animate-gold-blue-cta {
   animation: gold-blue-cta 2.5s ease-in-out infinite;
 }
+  @keyframes copper-flash {
+  0%, 100% { color: #b87333; text-shadow: 0 0 10px rgba(184, 115, 51, 0.4); }
+  50% { color: #ffd624; text-shadow: 0 0 20px rgba(255, 214, 36, 0.6); }
+}
+
+.animate-copper-flash {
+  animation: copper-flash 2s ease-in-out infinite;
+}
 }
