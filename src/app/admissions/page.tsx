@@ -90,8 +90,8 @@ export default function AdmissionsPage() {
         </div>
       </section>
 
-      {/* Application Form */}
-      <section className="section-padding" style={{ background: "linear-gradient(135deg, #f0f3ff 0%, #dde3ff 100%)" }}>
+            {/* Application Form */}
+      <section className="pt-28 pb-20" style={{ background: "linear-gradient(135deg, #f0f3ff 0%, #dde3ff 100%)" }}>
         <div className="section-container">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-10 reveal">
