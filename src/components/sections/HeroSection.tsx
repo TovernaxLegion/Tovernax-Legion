@@ -44,8 +44,7 @@ export function HeroSection() {
               <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl text-base animate-flash-whatsapp">
                 💬 WhatsApp: 9597078806
               </a>
-              </a>
-            </div>
+              </div>
 
             {/* Flashing Banner */}
             <div className="mb-4 animate-fade-up">
