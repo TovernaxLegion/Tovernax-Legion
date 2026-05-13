@@ -41,8 +41,9 @@ export function HeroSection() {
               <a href="tel:9597078806" className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl font-bold text-sm animate-flash-gold">
                 📞 9597078806
               </a>
-              <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl font-bold text-sm animate-flash-red">
+              <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl text-base animate-flash-whatsapp">
                 💬 WhatsApp: 9597078806
+              </a>
               </a>
             </div>
 
