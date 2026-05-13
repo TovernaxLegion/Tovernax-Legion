@@ -32,14 +32,14 @@ export function HeroSection() {
           {/* ── LEFT CONTENT ── */}
           <div>
             
-            {/* Flashing Banner */}
+          {/* Flashing Banner */}
             <div className="mb-4 animate-fade-up">
               <div
                 className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold"
                 style={{
-                  color: "#ffd624",
-                  border: "1px solid rgba(255,214,36,0.4)",
-                  background: "rgba(255,214,36,0.08)",
+                  color: "#00bfff",
+                  border: "1px solid rgba(0, 191, 255, 0.5)",
+                  background: "rgba(0, 191, 255, 0.08)",
                   animation: "pulse 2s ease-in-out infinite",
                 }}
               >
