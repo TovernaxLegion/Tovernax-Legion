@@ -314,7 +314,7 @@ export function HeroSection() {
                 <span className="text-2xl">🏆</span>
                 <div>
                   <div className="text-xs font-bold text-navy-900">Top Rankers</div>
-                  <div className="text-xs text-gray-500">JEE AIR 247</div>
+                  <div className="text-xs text-gray-500">72% Toppers of Class</div>
                 </div>
               </div>
             </div>
