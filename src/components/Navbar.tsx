@@ -13,7 +13,7 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <img src="/logo.png" alt="Logo" className="h-8 w-8 mr-2" />
+              <img src="/logo.png" alt="Logo" className="h-14 w-14 mr-3" />
               <div>
                 <span className="text-xl font-bold text-yellow-400">Tovernax Academy</span>
                 <span className="block text-xs text-yellow-200">A Unit of Tovernax Legion</span>
