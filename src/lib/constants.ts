@@ -103,7 +103,7 @@ export const EXAM_CATEGORIES = [
   },
   {
     category: "Civil Services",
-    exams: ["UPSC CSE", "GPSC", "RAILWAY", "State PSC" , "State Level other exams - Polic and Security Forces],
+    exams: ["UPSC CSE", "GPSC", "RAILWAY", "State PSC" , "State Level other exams - Police and Security Forces"],
   },
   {
     category: "Commerce & Management",
