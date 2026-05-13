@@ -32,19 +32,19 @@ export function HeroSection() {
         {/* ── LEFT CONTENT ── */}
           <div>
 
-            {/* Reserve Seat + Contact Strip */}
+        {/* Reserve Seat + Contact Strip */}
             <div className="flex flex-wrap items-center gap-3 mb-5 animate-fade-up">
               <Link href="/admissions" className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-base text-white transition-all duration-300"
                 style={{ background: "linear-gradient(135deg, #1a27e1, #3d57ff)" }}>
                 Reserve Seat →
               </Link>
-              <a href="tel:9597078806" className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl font-bold text-sm animate-flash-gold">
+              <a href="tel:9597078806" className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl text-base animate-flash-contact">
                 📞 9597078806
               </a>
               <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl text-base animate-flash-whatsapp">
                 💬 WhatsApp: 9597078806
               </a>
-              </div>
+            </div>
 
             {/* Flashing Banner */}
             <div className="mb-4 animate-fade-up">
