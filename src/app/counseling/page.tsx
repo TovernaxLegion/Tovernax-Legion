@@ -88,8 +88,8 @@ export default function CounselingPage() {
         </div>
       </section>
 
-      {/* What We Cover */}
-      <section className="section-padding bg-white">
+            {/* What We Cover */}
+      <section className="pt-28 pb-16 bg-white">
         <div className="section-container">
           <div className="text-center mb-12">
             <div className="section-label mb-4">What We Cover</div>
