@@ -61,8 +61,7 @@ export function HeroSection() {
               ))}
             </div>
           </div>
-
-          <div className="relative animate-fade-in animate-delay-300 hidden lg:block">
+          <div className="relative animate-fade-in animate-delay-300 mt-8 lg:mt-0">
             <div className="absolute inset-0 rounded-3xl blur-2xl opacity-30" style={{ background: "linear-gradient(135deg, #1a27e1, #3d57ff)" }} />
 
             <div className="relative rounded-3xl overflow-hidden border shadow-2xl" style={{ background: "rgba(255,255,255,0.04)", backdropFilter: "blur(24px)", borderColor: "rgba(255,214,36,0.15)" }}>
