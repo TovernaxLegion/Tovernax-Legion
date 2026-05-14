@@ -2,9 +2,8 @@ import Link from "next/link";
 
 export function CTASection() {
   return (
-    <section className="section-padding relative overflow-hidden pt-20"
+    <section className="pt-28 pb-20 relative overflow-hidden"
       style={{ background: "linear-gradient(135deg, #f0f3ff 0%, #e8ecff 50%, #dde3ff 100%)" }}>
-      {/* Background decoration */}
       <div className="absolute inset-0 bg-grid opacity-10" />
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full blur-3xl opacity-15 pointer-events-none"
         style={{ background: "radial-gradient(circle, #ffd624, transparent)" }} />
@@ -17,7 +16,7 @@ export function CTASection() {
 
           <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full text-sm font-bold mb-8"
             style={{ background: "rgba(26, 39, 225, 0.1)", color: "#1a27e1", border: "1px solid rgba(26, 39, 225, 0.2)" }}>
-            Admissions 2025–26
+            Admissions 2026–27
           </div>
 
           <h2 className="font-display text-4xl md:text-5xl font-bold leading-tight mb-6" style={{ color: "#0a1560" }}>
@@ -25,35 +24,30 @@ export function CTASection() {
             <span style={{ color: "#1a27e1" }}>Excellence</span>
             {" "}Starts Here
           </h2>
-          <p className="text-lg leading-relaxed mb-12 max-w-2xl mx-auto" style={{ color: "#1a27e1" }}>
+          <p className="text-lg leading-relaxed mb-12 max-w-2xl mx-auto font-medium" style={{ color: "#1a27e1" }}>
             Applications are now open for the 2026–27 academic year. Join hundreds of students who have transformed their futures with Tovernax Academy.
           </p>
 
           {/* Action area */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-            <Link href="/admissions" className="inline-flex items-center gap-2 px-10 py-4 rounded-2xl font-bold text-lg text-white transition-all duration-300"
-              style={{ background: "linear-gradient(135deg, #1a27e1, #3d57ff)" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-12">
+            <Link href="/admissions" className="inline-flex items-center gap-2 px-12 py-5 rounded-2xl font-bold text-lg text-white transition-all duration-300 animate-gold-blue-cta">
               Apply for Admission Now
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </Link>
-            <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl font-semibold text-base transition-all duration-300"
-              style={{ color: "#1a27e1", border: "2px solid rgba(26, 39, 225, 0.35)" }}>
+            <Link href="/contact" className="inline-flex items-center gap-2 px-10 py-5 rounded-2xl font-semibold text-base transition-all duration-300"
+              style={{ color: "#1a27e1", border: "2px solid rgba(26, 39, 225, 0.3)" }}>
               Schedule a Counseling Call
             </Link>
           </div>
 
           {/* Trust signals */}
-          <div className="flex flex-wrap justify-center gap-8 text-sm" style={{ color: "#1a27e1" }}>
-            {[
-              "✅ Free first counseling session",
-              "✅ Flexible Payment options",
-              "✅ Scholarship tests available",
-              "✅ Student Aptitude Test",
-            ].map((item) => (
-              <span key={item} className="font-medium">{item}</span>
-            ))}
+          <div className="flex flex-wrap justify-center gap-6 text-sm font-medium" style={{ color: "#1a27e1" }}>
+            <span>✅ Free first counseling session</span>
+            <span>✅ Flexible Payment options</span>
+            <span>✅ Scholarship tests available</span>
+            <span>✅ Student Aptitude Test</span>
           </div>
         </div>
       </div>
