@@ -66,16 +66,20 @@ export default function Navbar() {
             <div className="hidden lg:flex items-center gap-2 ml-6">
 
               {navLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="relative px-2 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 group"
-                >
-                  {link.label}
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-5"
-                    style={{ background: "linear-gradient(90deg, #ffd624, #f5b800)" }} />
-                </Link>
-              ))}
+              <Link
+              key={link.href}
+              href={link.href}
+              className="relative px-2 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 group"
+              style={link.label === "LMS" ? {
+              color: "#ffd624",
+              textShadow: "0 0 8px rgba(255,214,36,0.6), 0 0 20px rgba(255,214,36,0.3)",
+              } : undefined}
+    >
+    {link.label}
+    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-5"
+      style={{ background: link.label === "LMS" ? "linear-gradient(90deg, #3b82f6, #8b5cf6)" : "linear-gradient(90deg, #ffd624, #f5b800)" }} />
+  </Link>
+))}
 
               {/* Divider */}
               <div className="mx-1 h-6 w-px bg-white/15" />
