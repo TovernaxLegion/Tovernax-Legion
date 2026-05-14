@@ -80,7 +80,7 @@ export default function Navbar() {
               <div className="mx-1 h-6 w-px bg-white/15" />
 
               {/* Flashing Contact Numbers */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
                 <a href="tel:+91 959707 8806" className="text-xs font-bold animate-flash-phone whitespace-nowrap">
                   📞 +91 959707 8806
                 </a>
