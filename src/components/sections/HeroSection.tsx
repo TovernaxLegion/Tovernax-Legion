@@ -32,7 +32,7 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative flex items-center overflow-hidden pt-16 pb-4"
+      className="relative flex items-center overflow-hidden pt-24 pb-4"
       style={{
         background:
           "linear-gradient(135deg,#020818 0%,#040d2e 40%,#071050 70%,#0a1560 100%)",
