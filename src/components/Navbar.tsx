@@ -52,10 +52,10 @@ export default function Navbar() {
                 <img src="/logo.png" alt="Logo" className="h-12 w-auto relative z-10 group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div>
-                <span className="text-lg font-bold text-white group-hover:text-yellow-300 transition-colors duration-300">
+               <span className="text-lg font-bold transition-colors duration-300" style={{ color: "#ffd624" }}>
                   Tovernax Academy
                 </span>
-                <span className="block text-[10px] font-medium tracking-wider uppercase" style={{ color: "rgba(255,255,255,0.45)" }}>
+                <span className="block text-[10px] font-medium tracking-wider uppercase" style={{ color: "#ffd62488" }}>
                   A Unit of Tovernax Legion
                 </span>
               </div>
