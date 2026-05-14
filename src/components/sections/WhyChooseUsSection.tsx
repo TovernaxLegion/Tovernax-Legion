@@ -2,45 +2,40 @@ import { WHY_CHOOSE_US } from "@/lib/constants";
 
 export function WhyChooseUsSection() {
   return (
-    <section className="section-padding bg-mesh pt-24">
+    <section className="pt-28 pb-20 bg-white">
       <div className="section-container">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-16 reveal">
-          <div
-            className="inline-block px-8 py-4 rounded-2xl mb-6 animate-gold-blue"
-          >
+          <div className="inline-block px-10 py-5 rounded-2xl mb-6 animate-gold-blue">
             <h2 className="font-display text-4xl md:text-5xl font-bold">
               Why Tovernax Academy
             </h2>
           </div>
-          <p className="text-navy-900 text-2xl font-bold mb-5">
+          <p className="text-2xl font-bold mb-5" style={{ color: "#0a1560" }}>
             Education Reimagined for{" "}
-            <span className="text-gradient">Real Results</span>
+            <span style={{ color: "#ffd624" }}>Real Results</span>
           </p>
-          <p className="text-gray-600 text-lg">
-            We don't just teach — we transform. Here's what makes Tovernax Academy the preferred choice for thousands of students and parents.
+          <p className="text-lg" style={{ color: "#1a27e1" }}>
+            We don't just teach — we transform. Here's what makes Tovernax Academy the preferred choice for hundreds of students and parents.
           </p>
         </div>
 
         {/* Features Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {WHY_CHOOSE_US.map((item, index) => (
-            <div
-              key={item.title}
-              className="card-premium p-7 reveal"
-              style={{ transitionDelay: `${index * 80}ms` }}
-            >
-              <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-5xl mb-5 ${item.color}`}>
+            <div key={item.title} className="p-8 rounded-2xl shadow-lg reveal group hover:shadow-xl transition-all duration-300"
+              style={{ background: "white", border: "1px solid rgba(26, 39, 225, 0.08)", transitionDelay: `${index * 80}ms` }}>
+              <div className={`w-20 h-20 rounded-2xl flex items-center justify-center text-5xl mb-5 ${item.color} group-hover:scale-110 transition-transform duration-300`}>
                 {item.icon}
               </div>
-              <h3 className="font-display font-bold text-xl text-navy-950 mb-3">{item.title}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{item.description}</p>
+              <h3 className="font-display font-bold text-xl mb-3" style={{ color: "#0a1560" }}>{item.title}</h3>
+              <p className="text-sm leading-relaxed" style={{ color: "#1a27e1" }}>{item.description}</p>
             </div>
           ))}
         </div>
 
-             {/* Bottom CTA strip */}
-        <div className="mt-16 p-10 rounded-3xl text-center reveal"
+        {/* Bottom CTA strip */}
+        <div className="mt-20 p-10 rounded-3xl text-center reveal"
           style={{ background: "linear-gradient(135deg, #0a1560 0%, #1a27e1 100%)", border: "1px solid rgba(255,214,36,0.2)" }}>
           <p className="text-white font-bold text-xl mb-2">
             Ready to experience the Tovernax difference?
