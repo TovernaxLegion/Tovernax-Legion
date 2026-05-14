@@ -6,7 +6,7 @@ import { STATS } from "@/lib/constants";
 export function HeroSection() {
   return (
     <section
-      className="relative flex items-center overflow-hidden pt-6 pb-8"
+      className="relative flex items-center overflow-hidden pt-2 pb-4"
       style={{ background: "linear-gradient(135deg, #020818 0%, #040d2e 40%, #071050 70%, #0a1560 100%)" }}
     >
       {/* Background grid */}
@@ -27,44 +27,13 @@ export function HeroSection() {
       />
 
       <div className="section-container relative z-10 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
 
-        {/* ── LEFT CONTENT ── */}
+          {/* ── LEFT CONTENT ── */}
           <div>
 
-        {/* Reserve Seat + Contact Strip */}
-            <div className="flex flex-wrap items-center gap-3 mb-5 animate-fade-up">
-              <Link href="/admissions" className="inline-flex items-center gap-2 px-6 py-3 rounded-2xl font-bold text-base text-white transition-all duration-300"
-                style={{ background: "linear-gradient(135deg, #1a27e1, #3d57ff)" }}>
-                Reserve Seat →
-              </Link>
-              <a href="tel:9597078806" className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl text-base animate-flash-contact">
-                📞 9597078806
-              </a>
-              <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-3 rounded-2xl text-base animate-flash-whatsapp">
-                💬 WhatsApp: 9597078806
-              </a>
-            </div>
-
-            {/* Flashing Banner */}
-            <div className="mb-4 animate-fade-up">
-              <div
-                className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold"
-                style={{
-                  color: "#00bfff",
-                  border: "1px solid rgba(0, 191, 255, 0.5)",
-                  background: "rgba(0, 191, 255, 0.08)",
-                  animation: "pulse 2s ease-in-out infinite",
-                }}
-              >
-                <span className="text-base">⚡</span>
-                We cover syllabus and prepare students for competitive exams
-                <span className="text-base">⚡</span>
-              </div>
-            </div>
-
             {/* Headline */}
-            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-4 animate-fade-up"
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-3 animate-fade-up"
               style={{ color: "#ffffff" }}>
               Shape Your{" "}
               <span
@@ -82,7 +51,7 @@ export function HeroSection() {
 
             {/* Sub-text */}
             <p
-              className="text-base leading-relaxed mb-6 max-w-xl animate-fade-up animate-delay-200"
+              className="text-base leading-relaxed mb-5 max-w-xl animate-fade-up animate-delay-200"
               style={{ color: "rgba(255,255,255,0.65)" }}
             >
               Tovernax Academy blends academic excellence with competitive exam mastery — through
@@ -91,14 +60,9 @@ export function HeroSection() {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4 mb-8 animate-fade-up animate-delay-300">
-              <Link
-                href="/admissions"
-                className="inline-flex items-center gap-2 px-8 py-3 rounded-xl font-semibold text-base transition-all duration-300"
-                style={{
-                  color: "#ffd624",
-                  border: "2px solid rgba(255, 214, 36, 0.35)",
-                }}
+            <div className="flex flex-wrap gap-4 mb-6 animate-fade-up animate-delay-300">
+              <Link href="/admissions" className="inline-flex items-center gap-2 px-8 py-3 rounded-xl font-semibold text-base transition-all duration-300"
+                style={{ color: "#ffd624", border: "2px solid rgba(255, 214, 36, 0.35)" }}
                 onMouseEnter={(e) => {
                   (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,214,36,0.7)";
                   (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,214,36,0.06)";
@@ -113,13 +77,8 @@ export function HeroSection() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </Link>
-              <Link
-                href="/courses"
-                className="inline-flex items-center gap-2 px-8 py-3 rounded-xl font-semibold text-base transition-all duration-300"
-                style={{
-                  color: "#ffd624",
-                  border: "2px solid rgba(255, 214, 36, 0.35)",
-                }}
+              <Link href="/courses" className="inline-flex items-center gap-2 px-8 py-3 rounded-xl font-semibold text-base transition-all duration-300"
+                style={{ color: "#ffd624", border: "2px solid rgba(255, 214, 36, 0.35)" }}
                 onMouseEnter={(e) => {
                   (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(255,214,36,0.7)";
                   (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,214,36,0.06)";
@@ -178,7 +137,7 @@ export function HeroSection() {
               <div className="p-8">
 
                 {/* Card Header */}
-                <div className="flex items-center justify-between mb-6">
+                <div className="flex items-center justify-between mb-4">
                   <div>
                     <div
                       className="text-xs font-bold tracking-widest uppercase mb-1"
@@ -187,13 +146,7 @@ export function HeroSection() {
                       Student Progress
                     </div>
                     <div
-                      className="font-display text-2xl font-bold"
-                      style={{
-                        background: "linear-gradient(135deg, #ffd624, #f5b800)",
-                        WebkitBackgroundClip: "text",
-                        WebkitTextFillColor: "transparent",
-                        backgroundClip: "text",
-                      }}
+                      className="font-display text-2xl font-bold animate-sky-gold-white"
                     >
                       Academic and Competitive Excellence
                     </div>
@@ -206,8 +159,20 @@ export function HeroSection() {
                   </div>
                 </div>
 
+                {/* Flashing Banner below Academic Excellence */}
+                <div className="mb-5">
+                  <div
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold animate-sky-gold-white"
+                    style={{ border: "1px solid rgba(0, 191, 255, 0.3)", background: "rgba(0, 191, 255, 0.06)" }}
+                  >
+                    <span className="text-base">⚡</span>
+                    We cover syllabus and prepare students for competitive exams
+                    <span className="text-base">⚡</span>
+                  </div>
+                </div>
+
                 {/* Progress bars — Class 6, 7, 8, 9, 10 */}
-                <div className="space-y-4 mb-8">
+                <div className="space-y-3 mb-6">
                   {[
                     { label: "Class 6",  percent: 100,  color: "#f5b800" },
                     { label: "Class 7",  percent: 100,  color: "#f5b800" },
@@ -216,7 +181,7 @@ export function HeroSection() {
                     { label: "Class 10", percent: 100, color: "#10b981" },
                   ].map((item) => (
                     <div key={item.label}>
-                      <div className="flex justify-between text-sm mb-1.5">
+                      <div className="flex justify-between text-sm mb-1">
                         <span className="font-semibold" style={{ color: "rgba(255,255,255,0.85)" }}>
                           {item.label}
                         </span>
@@ -288,7 +253,7 @@ export function HeroSection() {
                 </div>
               </div>
 
-              {/* Bottom CTA strip */}
+                            {/* Bottom CTA strip */}
               <div
                 className="px-8 py-4 flex items-center justify-between"
                 style={{ borderTop: "1px solid rgba(255,255,255,0.07)" }}
@@ -378,3 +343,4 @@ export function HeroSection() {
     </section>
   );
 }
+
