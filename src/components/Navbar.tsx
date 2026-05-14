@@ -43,10 +43,10 @@ export default function Navbar() {
             : "0 4px 16px rgba(0, 0, 0, 0.15)",
         }}
       >
-          <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20 items-center">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
+            <Link href="/" className="flex items-center gap-3 group flex-shrink-0 -ml-2">
               <div className="relative">
                 <div className="absolute inset-0 rounded-xl blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-500"
                   style={{ background: "linear-gradient(135deg, #ffd624, #3d57ff)" }} />
