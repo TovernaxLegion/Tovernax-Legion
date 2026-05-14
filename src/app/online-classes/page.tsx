@@ -39,20 +39,25 @@ export default function OnlineClassesPage() {
       />
 
       {/* Features */}
-      <section className="section-padding bg-white">
+      <section className="pt-28 pb-20" style={{ background: "linear-gradient(135deg, #f0f3ff 0%, #e8ecff 100%)" }}>
         <div className="section-container">
-          <div className="text-center mb-12 reveal">
-            <div className="section-label mb-4">Platform Features</div>
-            <h2 className="font-display text-4xl font-bold text-navy-950">
-              Online Learning <span className="text-gradient">Redefined</span>
+          <div className="text-center mb-16 reveal">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold mb-6"
+              style={{ background: "rgba(26, 39, 225, 0.1)", color: "#1a27e1", border: "1px solid rgba(26, 39, 225, 0.2)" }}>
+              Platform Features
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl font-bold" style={{ color: "#0a1560" }}>
+              Online Learning <span style={{ color: "#ffd624" }}>Redefined</span>
             </h2>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {FEATURES.map((f, i) => (
-              <div key={f.title} className="card-premium p-7 reveal" style={{ transitionDelay: `${i * 70}ms` }}>
-                <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-700 flex items-center justify-center text-2xl mb-4">{f.icon}</div>
-                <h3 className="font-semibold text-navy-950 mb-2">{f.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
+              <div key={f.title} className="p-7 rounded-2xl shadow-lg reveal group hover:shadow-xl transition-all duration-300"
+                style={{ background: "white", border: "1px solid rgba(26, 39, 225, 0.08)", transitionDelay: `${i * 70}ms` }}>
+                <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-5 group-hover:scale-110 transition-transform duration-300"
+                  style={{ background: "rgba(26, 39, 225, 0.08)" }}>{f.icon}</div>
+                <h3 className="font-display font-bold text-lg mb-2" style={{ color: "#0a1560" }}>{f.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "#1a27e1" }}>{f.desc}</p>
               </div>
             ))}
           </div>
@@ -60,41 +65,41 @@ export default function OnlineClassesPage() {
       </section>
 
       {/* Tech Platform Highlight */}
-      <section className="section-padding bg-navy-950 relative overflow-hidden">
+      <section className="pt-28 pb-20 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #020818 0%, #040d2e 40%, #071050 70%, #0a1560 100%)" }}>
         <div className="absolute inset-0 bg-grid opacity-15" />
+        <div className="absolute top-1/4 right-0 w-80 h-80 rounded-full blur-3xl opacity-15 pointer-events-none"
+          style={{ background: "radial-gradient(circle, #3d57ff, transparent)" }} />
         <div className="section-container relative z-10">
           <div className="grid lg:grid-cols-2 gap-14 items-center">
             <div className="reveal-left">
-              <div className="section-label mb-4" style={{ background: "rgba(255,255,255,0.06)", color: "white", borderColor: "rgba(255,255,255,0.1)" }}>
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold mb-6"
+                style={{ background: "rgba(255,255,255,0.08)", color: "white", border: "1px solid rgba(255,255,255,0.12)" }}>
                 Our Platform
               </div>
-              <h2 className="font-display text-4xl font-bold text-white mb-5">
+              <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-5">
                 Built for <span style={{ color: "#ffd624" }}>Serious Learners</span>
               </h2>
-              <p className="text-gray-400 leading-relaxed mb-8">
+              <p className="text-lg leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.6)" }}>
                 Our proprietary online learning platform combines video streaming, interactive tools, and analytics to create the most engaging and effective online classroom experience available.
               </p>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-4">
                 {TECH_STACK.map((t) => (
-                  <div key={t.name} className="flex items-center gap-3 p-3 rounded-xl border border-white/8 hover:border-white/20 transition-colors"
-                    style={{ background: "rgba(255,255,255,0.04)" }}>
-                    <span className="text-xl">{t.icon}</span>
+                  <div key={t.name} className="flex items-center gap-3 p-4 rounded-xl transition-colors hover:bg-white/5"
+                    style={{ background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                    <span className="text-2xl">{t.icon}</span>
                     <span className="text-sm font-medium text-gray-300">{t.name}</span>
                   </div>
                 ))}
               </div>
             </div>
             <div className="reveal-right">
-              {/* Mock platform UI */}
               <div className="rounded-3xl border border-white/10 overflow-hidden shadow-2xl" style={{ background: "rgba(255,255,255,0.05)" }}>
-                {/* Window bar */}
                 <div className="flex items-center gap-2 px-5 py-3 border-b border-white/10">
                   <div className="w-3 h-3 rounded-full bg-red-400" />
                   <div className="w-3 h-3 rounded-full bg-yellow-400" />
                   <div className="w-3 h-3 rounded-full bg-green-400" />
                   <span className="ml-3 text-xs text-gray-500 font-mono">tovernax-lms.app/live</span>
                 </div>
-                {/* Video area */}
                 <div className="aspect-video bg-navy-900 flex items-center justify-center relative">
                   <div className="text-center">
                     <div className="text-5xl mb-3">⚛️</div>
@@ -112,7 +117,6 @@ export default function OnlineClassesPage() {
                     <span className="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded animate-pulse">● LIVE</span>
                   </div>
                 </div>
-                {/* Bottom toolbar */}
                 <div className="px-5 py-3 flex items-center justify-between border-t border-white/10">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-navy-600 flex items-center justify-center text-xs text-white font-bold">T</div>
@@ -134,23 +138,28 @@ export default function OnlineClassesPage() {
       </section>
 
       {/* Schedule */}
-      <section className="section-padding bg-mesh">
+      <section className="pt-28 pb-20 bg-white">
         <div className="section-container">
-          <div className="text-center mb-12 reveal">
-            <div className="section-label mb-4">Class Schedule</div>
-            <h2 className="font-display text-4xl font-bold text-navy-950">Flexible Timings for Every Student</h2>
+          <div className="text-center mb-16 reveal">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold mb-6"
+              style={{ background: "rgba(26, 39, 225, 0.1)", color: "#1a27e1", border: "1px solid rgba(26, 39, 225, 0.2)" }}>
+              Class Schedule
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl font-bold" style={{ color: "#0a1560" }}>
+              Flexible Timings for <span style={{ color: "#ffd624" }}>Every Student</span>
+            </h2>
           </div>
-          <div className="max-w-2xl mx-auto grid sm:grid-cols-3 gap-5 reveal">
+          <div className="max-w-3xl mx-auto grid sm:grid-cols-3 gap-8 reveal">
             {[
-              { slot: "Morning Batch", time: "7:00 AM – 10:00 AM", icon: "🌅", best: "School going students" },
-              { slot: "Afternoon Batch", time: "2:00 PM – 5:00 PM", icon: "☀️", best: "Droppers & full-time" },
-              { slot: "Evening Batch", time: "6:00 PM – 9:00 PM", icon: "🌆", best: "Working professionals" },
+              { slot: "Morning Batch", time: "7:00 AM – 10:00 AM", icon: "🌅", best: "School going students", color: "#ffd624" },
+              { slot: "Afternoon Batch", time: "2:00 PM – 5:00 PM", icon: "☀️", best: "Droppers & full-time", color: "#1a27e1" },
+              { slot: "Evening Batch", time: "6:00 PM – 9:00 PM", icon: "🌆", best: "Working professionals", color: "#10b981" },
             ].map((b) => (
-              <div key={b.slot} className="card-premium p-6 text-center">
-                <div className="text-3xl mb-3">{b.icon}</div>
-                <h3 className="font-semibold text-navy-950 mb-1">{b.slot}</h3>
-                <div className="text-navy-700 font-bold text-sm mb-2">{b.time}</div>
-                <div className="text-xs text-gray-400">Best for: {b.best}</div>
+              <div key={b.slot} className="p-8 rounded-2xl text-center shadow-lg" style={{ background: "white", border: `2px solid ${b.color}22` }}>
+                <div className="text-5xl mb-4">{b.icon}</div>
+                <h3 className="font-display font-bold text-lg mb-2" style={{ color: "#0a1560" }}>{b.slot}</h3>
+                <div className="font-bold text-sm mb-2" style={{ color: b.color }}>{b.time}</div>
+                <div className="text-xs" style={{ color: "#1a27e1" }}>Best for: {b.best}</div>
               </div>
             ))}
           </div>
@@ -158,13 +167,17 @@ export default function OnlineClassesPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding" style={{ background: "linear-gradient(135deg, #0e1154, #1a27e1)" }}>
+      <section className="pt-28 pb-20" style={{ background: "linear-gradient(135deg, #0a1560 0%, #1a27e1 100%)" }}>
         <div className="section-container text-center reveal">
-          <h2 className="font-display text-3xl font-bold text-white mb-4">Try a Free Online Demo Class</h2>
-          <p className="text-blue-200 mb-8 max-w-xl mx-auto">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-4">
+            Try a Free Online Demo Class
+          </h2>
+          <p className="text-lg mb-10 max-w-xl mx-auto" style={{ color: "rgba(255,255,255,0.7)" }}>
             Experience our online platform firsthand. Book a free demo session in your preferred subject.
           </p>
-          <Link href="/admissions" className="btn-gold">Book Free Demo Class</Link>
+          <Link href="/admissions" className="inline-block px-14 py-6 rounded-2xl font-bold text-2xl text-white animate-red-blue">
+            Book Free Demo Class
+          </Link>
         </div>
       </section>
     </div>
