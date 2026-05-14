@@ -55,7 +55,7 @@ export default function Navbar() {
                <span className="text-lg font-bold transition-colors duration-300" style={{ color: "#ffd624" }}>
                   Tovernax Academy
                 </span>
-                <span className="block text-[10px] font-medium tracking-wider uppercase" style={{ color: "##ffffff" }}>
+                <span className="block text-[10px] font-medium tracking-wider uppercase" style={{ color: "#ffffff#" }}>
                   A Unit of Tovernax Legion
                 </span>
               </div>
