@@ -80,8 +80,8 @@ export default function Navbar() {
 
               {/* Flashing Contact Numbers */}
               <div className="flex items-center gap-3">
-                <a href="tel:9597078806" className="text-xs font-bold animate-flash-phone whitespace-nowrap">
-                  📞 9597078806
+                <a href="tel:+91 959707 8806" className="text-xs font-bold animate-flash-phone whitespace-nowrap">
+                  📞 +91 959707 8806
                 </a>
                 <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="text-xs font-bold animate-flash-whatsapp whitespace-nowrap">
                   💬 WhatsApp
@@ -157,8 +157,8 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="pt-2 flex flex-col gap-2" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-              <a href="tel:9597078806" className="block px-4 py-2 rounded-xl text-sm font-bold animate-flash-phone">
-                📞 Call: 9597078806
+              <a href="tel:+91 959707 8806" className="block px-4 py-2 rounded-xl text-sm font-bold animate-flash-phone">
+                📞 Call: +91 959707 8806
               </a>
               <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 rounded-xl text-sm font-bold animate-flash-whatsapp">
                 💬 WhatsApp: 9597078806
