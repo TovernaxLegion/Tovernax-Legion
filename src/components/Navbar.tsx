@@ -26,31 +26,13 @@ export default function Navbar() {
 
   return (
     <nav className="sticky top-0 z-50">
-      {/* Top Marquee Bar */}
-      <div className="overflow-hidden py-1.5" style={{ background: "linear-gradient(90deg, #0a1560, #1a27e1, #0a1560)" }}>
-        <div className="flex animate-marquee whitespace-nowrap">
-          {[1, 2, 3].map((_) => (
-            <span key={_} className="inline-flex items-center gap-8">
-              <a href="tel:9597078806" className="inline-flex items-center gap-2 mx-6 font-bold text-xs animate-flash-phone">
-                📞 9597078806
-              </a>
-              <span className="text-yellow-400 text-xs">✦</span>
-              <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mx-6 font-bold text-xs animate-flash-whatsapp">
-                💬 WhatsApp: 9597078806
-              </a>
-              <span className="text-yellow-400 text-xs">✦</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
       {/* Main Navbar */}
       <div
         className="transition-all duration-500"
         style={{
           background: scrolled
-            ? "rgba(10, 21, 96, 0.95)"
-            : "rgba(10, 21, 96, 0.85)",
+            ? "rgba(10, 21, 96, 0.97)"
+            : "rgba(10, 21, 96, 0.88)",
           backdropFilter: "blur(20px)",
           borderBottom: scrolled
             ? "1px solid rgba(255, 214, 36, 0.15)"
@@ -63,7 +45,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             {/* Logo */}
-            <Link href="/" className="flex items-center gap-3 group">
+            <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
               <div className="relative">
                 <div className="absolute inset-0 rounded-xl blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-500"
                   style={{ background: "linear-gradient(135deg, #ffd624, #3d57ff)" }} />
@@ -92,7 +74,22 @@ export default function Navbar() {
                     style={{ background: "linear-gradient(90deg, #ffd624, #f5b800)" }} />
                 </Link>
               ))}
-              <div className="ml-3 pl-3 border-l border-white/10">
+
+              {/* Divider */}
+              <div className="mx-2 h-6 w-px bg-white/15" />
+
+              {/* Flashing Contact Numbers */}
+              <div className="flex items-center gap-3">
+                <a href="tel:9597078806" className="text-xs font-bold animate-flash-phone whitespace-nowrap">
+                  📞 9597078806
+                </a>
+                <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="text-xs font-bold animate-flash-whatsapp whitespace-nowrap">
+                  💬 WhatsApp
+                </a>
+              </div>
+
+              {/* Apply Now Button */}
+              <div className="ml-2">
                 <Link
                   href="/admissions"
                   className="px-5 py-2 rounded-xl text-sm font-bold text-white transition-all duration-300 hover:scale-105"
@@ -107,8 +104,13 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Mobile Menu Button */}
+            {/* Mobile Right Side */}
             <div className="lg:hidden flex items-center gap-3">
+              <div className="hidden sm:flex items-center gap-2">
+                <a href="tel:9597078806" className="text-xs font-bold animate-flash-phone whitespace-nowrap">
+                  📞 9597078806
+                </a>
+              </div>
               <Link
                 href="/admissions"
                 className="px-4 py-1.5 rounded-lg text-xs font-bold"
@@ -144,18 +146,17 @@ export default function Navbar() {
           }}
         >
           <div className="px-4 pb-4 pt-2 space-y-1" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-            {navLinks.map((link, i) => (
+            {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 transition-all duration-300"
                 onClick={() => setIsOpen(false)}
-                style={{ animationDelay: `${i * 50}ms` }}
               >
                 {link.label}
               </Link>
             ))}
-            <div className="pt-2 flex flex-col gap-2">
+            <div className="pt-2 flex flex-col gap-2" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
               <a href="tel:9597078806" className="block px-4 py-2 rounded-xl text-sm font-bold animate-flash-phone">
                 📞 Call: 9597078806
               </a>
