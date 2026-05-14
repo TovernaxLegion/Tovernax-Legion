@@ -77,7 +77,7 @@ export default function Navbar() {
               ))}
 
               {/* Divider */}
-              <div className="mx-2 h-6 w-px bg-white/15" />
+              <div className="mx-1 h-6 w-px bg-white/15" />
 
               {/* Flashing Contact Numbers */}
               <div className="flex items-center gap-3">
