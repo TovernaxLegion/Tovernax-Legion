@@ -7,166 +7,95 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-950 shadow-md sticky top-0 z-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <img src="/logo.png" alt="Logo" className="h-14 w-auto mr-3" />
-              <div>
-                <span className="text-xl font-bold text-yellow-400">Tovernax Academy</span>
-                <span className="block text-xs text-yellow-200">A Unit of Tovernax Legion</span>
-              </div>
-            </Link>
-          </div>
-
-          {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
-            <Link
-              href="/"
-              className="text-white hover:text-yellow-400 font-medium transition-colors"
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="text-white hover:text-yellow-400 font-medium transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              href="/courses"
-              className="text-white hover:text-yellow-400 font-medium transition-colors"
-            >
-              Courses
-            </Link>
-            <Link
-              href="/online-classes"
-              className="text-white hover:text-yellow-400 font-medium transition-colors"
-            >
-              Online Classes
-            </Link>
-            <Link
-              href="/offline-classes"
-              className="text-white hover:text-yellow-400 font-medium transition-colors"
-            >
-              Offline Classes
-            </Link>
-            <Link
-              href="/hybrid-learning"
-              className="text-white hover:text-yellow-400 font-medium transition-colors"
-            >
-              Hybrid Learning
-            </Link>
-            <Link
-              href="/counseling"
-              className="text-white hover:text-yellow-400 font-medium transition-colors"
-            >
-              Counseling
-            </Link>
-            <Link
-              href="/contact"
-              className="text-white hover:text-yellow-400 font-medium transition-colors"
-            >
-              Contact
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="text-white focus:outline-none"
-              aria-label="Toggle menu"
-            >
-              <svg
-                className="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                {isOpen ? (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                ) : (
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M4 6h16M4 12h16M4 18h16"
-                  />
-                )}
-              </svg>
-            </button>
-          </div>
+    <nav className="sticky top-0 z-50">
+      {/* Top Marquee Bar */}
+      <div className="overflow-hidden py-2" style={{ background: "linear-gradient(135deg, #0a1560, #1a27e1)" }}>
+        <div className="flex animate-marquee whitespace-nowrap">
+          <a href="tel:9597078806" className="inline-flex items-center gap-2 mx-8 font-bold text-sm animate-flash-phone">
+            📞 Call: 9597078806
+          </a>
+          <span className="text-yellow-400 mx-4">★</span>
+          <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mx-8 font-bold text-sm animate-flash-whatsapp">
+            💬 WhatsApp: 9597078806
+          </a>
+          <span className="text-yellow-400 mx-4">★</span>
+          <a href="tel:9597078806" className="inline-flex items-center gap-2 mx-8 font-bold text-sm animate-flash-phone">
+            📞 Call: 9597078806
+          </a>
+          <span className="text-yellow-400 mx-4">★</span>
+          <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mx-8 font-bold text-sm animate-flash-whatsapp">
+            💬 WhatsApp: 9597078806
+          </a>
+          <span className="text-yellow-400 mx-4">★</span>
+          <a href="tel:9597078806" className="inline-flex items-center gap-2 mx-8 font-bold text-sm animate-flash-phone">
+            📞 Call: 9597078806
+          </a>
+          <span className="text-yellow-400 mx-4">★</span>
+          <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mx-8 font-bold text-sm animate-flash-whatsapp">
+            💬 WhatsApp: 9597078806
+          </a>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden pb-4">
-            <Link
-              href="/"
-              className="block py-2 text-white hover:text-yellow-400 font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Home
-            </Link>
-            <Link
-              href="/about"
-              className="block py-2 text-white hover:text-yellow-400 font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </Link>
-            <Link
-              href="/courses"
-              className="block py-2 text-white hover:text-yellow-400 font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Courses
-            </Link>
-            <Link
-              href="/online-classes"
-              className="block py-2 text-white hover:text-yellow-400 font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Online Classes
-            </Link>
-            <Link
-              href="/offline-classes"
-              className="block py-2 text-white hover:text-yellow-400 font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Offline Classes
-            </Link>
-            <Link
-              href="/hybrid-learning"
-              className="block py-2 text-white hover:text-yellow-400 font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Hybrid Learning
-            </Link>
-            <Link
-              href="/counseling"
-              className="block py-2 text-white hover:text-yellow-400 font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Counseling
-            </Link>
-            <Link
-              href="/contact"
-              className="block py-2 text-white hover:text-yellow-400 font-medium"
-              onClick={() => setIsOpen(false)}
-            >
-              Contact
-            </Link>
+      {/* Main Navbar */}
+      <div className="bg-blue-950 shadow-md">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between h-16">
+            {/* Logo */}
+            <div className="flex items-center">
+              <Link href="/" className="flex items-center">
+                <img src="/logo.png" alt="Logo" className="h-14 w-auto mr-3" />
+                <div>
+                  <span className="text-xl font-bold text-yellow-400">Tovernax Academy</span>
+                  <span className="block text-xs text-yellow-200">A Unit of Tovernax Legion</span>
+                </div>
+              </Link>
+            </div>
+
+            {/* Desktop Menu */}
+            <div className="hidden md:flex items-center space-x-6">
+              <Link href="/" className="text-white hover:text-yellow-400 font-medium transition-colors">Home</Link>
+              <Link href="/about" className="text-white hover:text-yellow-400 font-medium transition-colors">About</Link>
+              <Link href="/courses" className="text-white hover:text-yellow-400 font-medium transition-colors">Courses</Link>
+              <Link href="/online-classes" className="text-white hover:text-yellow-400 font-medium transition-colors">Online Classes</Link>
+              <Link href="/offline-classes" className="text-white hover:text-yellow-400 font-medium transition-colors">Offline Classes</Link>
+              <Link href="/hybrid-learning" className="text-white hover:text-yellow-400 font-medium transition-colors">Hybrid Learning</Link>
+              <Link href="/counseling" className="text-white hover:text-yellow-400 font-medium transition-colors">Counseling</Link>
+              <Link href="/contact" className="text-white hover:text-yellow-400 font-medium transition-colors">Contact</Link>
+            </div>
+
+            {/* Mobile Menu Button */}
+            <div className="md:hidden flex items-center">
+              <button onClick={() => setIsOpen(!isOpen)} className="text-white focus:outline-none" aria-label="Toggle menu">
+                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  {isOpen ? (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  ) : (
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  )}
+                </svg>
+              </button>
+            </div>
           </div>
-        )}
+
+          {/* Mobile Menu */}
+          {isOpen && (
+            <div className="md:hidden pb-4">
+              <Link href="/" className="block py-2 text-white hover:text-yellow-400 font-medium" onClick={() => setIsOpen(false)}>Home</Link>
+              <Link href="/about" className="block py-2 text-white hover:text-yellow-400 font-medium" onClick={() => setIsOpen(false)}>About</Link>
+              <Link href="/courses" className="block py-2 text-white hover:text-yellow-400 font-medium" onClick={() => setIsOpen(false)}>Courses</Link>
+              <Link href="/online-classes" className="block py-2 text-white hover:text-yellow-400 font-medium" onClick={() => setIsOpen(false)}>Online Classes</Link>
+              <Link href="/offline-classes" className="block py-2 text-white hover:text-yellow-400 font-medium" onClick={() => setIsOpen(false)}>Offline Classes</Link>
+              <Link href="/hybrid-learning" className="block py-2 text-white hover:text-yellow-400 font-medium" onClick={() => setIsOpen(false)}>Hybrid Learning</Link>
+              <Link href="/counseling" className="block py-2 text-white hover:text-yellow-400 font-medium" onClick={() => setIsOpen(false)}>Counseling</Link>
+              <Link href="/contact" className="block py-2 text-white hover:text-yellow-400 font-medium" onClick={() => setIsOpen(false)}>Contact</Link>
+              <div className="mt-3 pt-3 border-t border-white/10 flex flex-col gap-2">
+                <a href="tel:9597078806" className="block py-2 font-bold text-sm animate-flash-phone">📞 Call: 9597078806</a>
+                <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="block py-2 font-bold text-sm animate-flash-whatsapp">💬 WhatsApp: 9597078806</a>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </nav>
   );
