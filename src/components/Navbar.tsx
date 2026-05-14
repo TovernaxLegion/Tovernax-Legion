@@ -49,7 +49,7 @@ export default function Navbar() {
               <div className="relative">
                 <div className="absolute inset-0 rounded-xl blur-md opacity-0 group-hover:opacity-50 transition-opacity duration-500"
                   style={{ background: "linear-gradient(135deg, #ffd624, #3d57ff)" }} />
-                <img src="/logo.png" alt="Logo" className="h-12 w-auto relative z-10 group-hover:scale-105 transition-transform duration-300" />
+                <img src="/logo.png" alt="Logo" className="h-16 w-auto relative z-10 group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div>
                <span className="text-lg font-bold transition-colors duration-300" style={{ color: "#ffd624" }}>
