@@ -40,26 +40,31 @@ export default function HybridLearningPage() {
       />
 
       {/* The Hybrid Advantage */}
-      <section className="section-padding bg-white">
+      <section className="pt-28 pb-20" style={{ background: "linear-gradient(135deg, #f0f3ff 0%, #e8ecff 100%)" }}>
         <div className="section-container">
-          <div className="text-center mb-12 reveal">
-            <div className="section-label mb-4">Why Hybrid?</div>
-            <h2 className="font-display text-4xl font-bold text-navy-950">
-              The <span className="text-gradient">Tovernax Hybrid Model</span>
+          <div className="text-center mb-16 reveal">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold mb-6"
+              style={{ background: "rgba(26, 39, 225, 0.1)", color: "#1a27e1", border: "1px solid rgba(26, 39, 225, 0.2)" }}>
+              Why Hybrid?
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-5" style={{ color: "#0a1560" }}>
+              The <span style={{ color: "#1a27e1" }}>Tovernax Hybrid Model</span>
             </h2>
-            <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto" style={{ color: "#1a27e1" }}>
               We pioneered hybrid learning in 2016, long before it became mainstream. Our model is refined, battle-tested, and consistently produces better outcomes than pure online or offline alone.
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {HOW_IT_WORKS.map((item, i) => (
-              <div key={item.step} className="card-premium p-7 reveal" style={{ transitionDelay: `${i * 70}ms` }}>
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-xs font-mono font-bold text-navy-400">{item.step}</span>
-                  <div className="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-700 flex items-center justify-center text-xl">{item.icon}</div>
+              <div key={item.step} className="p-7 rounded-2xl shadow-lg reveal group hover:shadow-xl transition-all duration-300"
+                style={{ background: "white", border: "1px solid rgba(26, 39, 225, 0.08)", transitionDelay: `${i * 70}ms` }}>
+                <div className="flex items-center gap-3 mb-5">
+                  <span className="text-xs font-mono font-bold px-3 py-1 rounded-lg" style={{ background: "rgba(26, 39, 225, 0.08)", color: "#1a27e1" }}>{item.step}</span>
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl group-hover:scale-110 transition-transform duration-300"
+                    style={{ background: "rgba(26, 39, 225, 0.08)" }}>{item.icon}</div>
                 </div>
-                <h3 className="font-semibold text-navy-950 mb-2">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                <h3 className="font-display font-bold text-lg mb-2" style={{ color: "#0a1560" }}>{item.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "#1a27e1" }}>{item.desc}</p>
               </div>
             ))}
           </div>
@@ -67,38 +72,41 @@ export default function HybridLearningPage() {
       </section>
 
       {/* Comparison Table */}
-      <section className="section-padding bg-mesh">
+      <section className="pt-28 pb-20 bg-white">
         <div className="section-container">
-          <div className="text-center mb-12 reveal">
-            <div className="section-label mb-4">Mode Comparison</div>
-            <h2 className="font-display text-4xl font-bold text-navy-950">
-              See Why Hybrid Wins
+          <div className="text-center mb-16 reveal">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold mb-6"
+              style={{ background: "rgba(26, 39, 225, 0.1)", color: "#1a27e1", border: "1px solid rgba(26, 39, 225, 0.2)" }}>
+              Mode Comparison
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl font-bold" style={{ color: "#0a1560" }}>
+              See Why <span style={{ color: "#1a27e1" }}>Hybrid Wins</span>
             </h2>
           </div>
-          <div className="max-w-3xl mx-auto card-premium overflow-hidden reveal">
+          <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden shadow-xl reveal" style={{ border: "1px solid rgba(26, 39, 225, 0.1)" }}>
             <table className="w-full">
               <thead>
                 <tr>
-                  <th className="px-6 py-5 text-left text-sm font-semibold text-gray-600 bg-gray-50">Feature</th>
-                  <th className="px-6 py-5 text-center text-sm font-semibold text-gray-600 bg-gray-50">Online</th>
-                  <th className="px-6 py-5 text-center text-sm font-semibold text-gray-600 bg-gray-50">Offline</th>
-                  <th className="px-6 py-5 text-center text-sm font-semibold text-navy-700 bg-navy-50">
+                  <th className="px-6 py-5 text-left text-sm font-bold" style={{ background: "rgba(26, 39, 225, 0.05)", color: "#0a1560" }}>Feature</th>
+                  <th className="px-6 py-5 text-center text-sm font-bold" style={{ background: "rgba(26, 39, 225, 0.05)", color: "#0a1560" }}>Online</th>
+                  <th className="px-6 py-5 text-center text-sm font-bold" style={{ background: "rgba(26, 39, 225, 0.05)", color: "#0a1560" }}>Offline</th>
+                  <th className="px-6 py-5 text-center text-sm font-bold" style={{ background: "linear-gradient(135deg, #0a1560, #1a27e1)", color: "#ffd624" }}>
                     Hybrid ✦
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {COMPARISON.map((row, i) => (
-                  <tr key={row.feature} className={i % 2 === 0 ? "bg-white" : "bg-gray-50/50"}>
-                    <td className="px-6 py-4 text-sm font-medium text-gray-700">{row.feature}</td>
+                  <tr key={row.feature} style={{ background: i % 2 === 0 ? "white" : "rgba(26, 39, 225, 0.02)" }}>
+                    <td className="px-6 py-4 text-sm font-semibold" style={{ color: "#0a1560" }}>{row.feature}</td>
                     <td className="px-6 py-4 text-center">
-                      {row.online ? <span className="text-green-500 text-lg">✓</span> : <span className="text-gray-300 text-lg">✗</span>}
+                      {row.online ? <span className="text-lg" style={{ color: "#10b981" }}>✓</span> : <span className="text-lg text-gray-300">✗</span>}
                     </td>
                     <td className="px-6 py-4 text-center">
-                      {row.offline ? <span className="text-green-500 text-lg">✓</span> : <span className="text-gray-300 text-lg">✗</span>}
+                      {row.offline ? <span className="text-lg" style={{ color: "#10b981" }}>✓</span> : <span className="text-lg text-gray-300">✗</span>}
                     </td>
-                    <td className="px-6 py-4 text-center bg-navy-50/30">
-                      {row.hybrid ? <span className="text-navy-600 text-lg font-bold">✓</span> : <span className="text-gray-300 text-lg">✗</span>}
+                    <td className="px-6 py-4 text-center" style={{ background: "rgba(26, 39, 225, 0.03)" }}>
+                      {row.hybrid ? <span className="text-lg font-bold" style={{ color: "#1a27e1" }}>✓</span> : <span className="text-lg text-gray-300">✗</span>}
                     </td>
                   </tr>
                 ))}
@@ -109,19 +117,20 @@ export default function HybridLearningPage() {
       </section>
 
       {/* Testimonial highlight */}
-      <section className="section-padding bg-white">
+      <section className="pt-28 pb-20" style={{ background: "linear-gradient(135deg, #0a1560 0%, #1a27e1 100%)" }}>
         <div className="section-container">
           <div className="max-w-3xl mx-auto reveal">
-            <div className="p-10 rounded-3xl text-center border border-navy-100 bg-gradient-to-br from-navy-50 to-blue-50">
-              <div className="text-4xl mb-5">"</div>
-              <p className="text-navy-900 text-xl font-display font-medium leading-relaxed mb-6">
+            <div className="p-10 rounded-3xl text-center" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)" }}>
+              <div className="text-5xl mb-5" style={{ color: "#ffd624" }}>"</div>
+              <p className="text-xl font-display font-medium leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.9)" }}>
                 The hybrid model at Tovernax was perfect for me. I could attend live classes on weekdays and join online on weekends when I was travelling. The flexibility didn't compromise my preparation at all — I cracked NEET with AIR 512.
               </p>
-              <div className="flex items-center justify-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white font-bold text-sm">PS</div>
+              <div className="flex items-center justify-center gap-4">
+                <div className="w-14 h-14 rounded-full flex items-center justify-center text-lg font-bold text-white shadow-lg"
+                  style={{ background: "linear-gradient(135deg, #10b981, #34d399)" }}>PS</div>
                 <div className="text-left">
-                  <div className="font-semibold text-navy-950">Priya Sharma</div>
-                  <div className="text-sm text-gray-500">NEET AIR 512 • 2024 Batch</div>
+                  <div className="font-bold text-white">Priya Sharma</div>
+                  <div className="text-sm" style={{ color: "#ffd624" }}>NEET AIR 512 • 2024 Batch</div>
                 </div>
               </div>
             </div>
@@ -130,13 +139,17 @@ export default function HybridLearningPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding" style={{ background: "linear-gradient(135deg, #0e1154, #1a27e1)" }}>
+      <section className="pt-28 pb-20" style={{ background: "linear-gradient(135deg, #f0f3ff 0%, #dde3ff 100%)" }}>
         <div className="section-container text-center reveal">
-          <h2 className="font-display text-3xl font-bold text-white mb-4">Experience Hybrid Learning Free</h2>
-          <p className="text-blue-200 mb-8 max-w-xl mx-auto">
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4" style={{ color: "#0a1560" }}>
+            Experience Hybrid Learning Free
+          </h2>
+          <p className="text-lg mb-10 max-w-xl mx-auto" style={{ color: "#1a27e1" }}>
             Try one week of hybrid learning — attend one session in-person, one online — and feel the difference yourself.
           </p>
-          <Link href="/admissions" className="btn-gold">Start Free Trial Week</Link>
+          <Link href="/admissions" className="inline-block px-14 py-6 rounded-2xl font-bold text-2xl text-white animate-red-blue">
+            Start Free Trial Week
+          </Link>
         </div>
       </section>
     </div>
