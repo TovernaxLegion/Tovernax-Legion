@@ -91,8 +91,8 @@ export default function Navbar() {
               {/* Apply Now Button */}
               <div className="ml-2">
                 <Link
-                  href="/admissions"
-                  className="px-5 py-2 rounded-xl text-sm font-bold text-white transition-all duration-300 hover:scale-105"
+                href="/admissions"
+                className="px-5 py-2 rounded-xl text-sm font-bold text-white transition-all duration-300 hover:scale-105 whitespace-nowrap"
                   style={{
                     background: "linear-gradient(135deg, #ffd624, #f5b800)",
                     color: "#0a1560",
