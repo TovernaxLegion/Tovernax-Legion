@@ -6,22 +6,22 @@ import { STATS } from "@/lib/constants";
 export function HeroSection() {
   const allCards = [
     // 📚 Academic
-    { label: "Class 6", percent: 100, icon: "📖", color: "#10b981", glow: "0 0 20px rgba(16,185,129,0.5), 0 0 40px rgba(16,185,129,0.2)", border: "rgba(16,185,129,0.5)", bg: "linear-gradient(135deg,rgba(16,185,129,0.12),rgba(16,185,129,0.04))" },
-    { label: "Class 7", percent: 100, icon: "📘", color: "#3b82f6", glow: "0 0 20px rgba(59,130,246,0.5), 0 0 40px rgba(59,130,246,0.2)", border: "rgba(59,130,246,0.5)", bg: "linear-gradient(135deg,rgba(59,130,246,0.12),rgba(59,130,246,0.04))" },
-    { label: "Class 8", percent: 100, icon: "📗", color: "#8b5cf6", glow: "0 0 20px rgba(139,92,246,0.5), 0 0 40px rgba(139,92,246,0.2)", border: "rgba(139,92,246,0.5)", bg: "linear-gradient(135deg,rgba(139,92,246,0.12),rgba(139,92,246,0.04))" },
-    { label: "Class 9", percent: 100, icon: "📙", color: "#f59e0b", glow: "0 0 20px rgba(245,158,11,0.5), 0 0 40px rgba(245,158,11,0.2)", border: "rgba(245,158,11,0.5)", bg: "linear-gradient(135deg,rgba(245,158,11,0.12),rgba(245,158,11,0.04))" },
-    { label: "Class 10", percent: 100, icon: "📕", color: "#ef4444", glow: "0 0 20px rgba(239,68,68,0.5), 0 0 40px rgba(239,68,68,0.2)", border: "rgba(239,68,68,0.5)", bg: "linear-gradient(135deg,rgba(239,68,68,0.12),rgba(239,68,68,0.04))" },
-    { label: "Class 11", percent: 98, icon: "📓", color: "#ec4899", glow: "0 0 20px rgba(236,72,153,0.5), 0 0 40px rgba(236,72,153,0.2)", border: "rgba(236,72,153,0.5)", bg: "linear-gradient(135deg,rgba(236,72,153,0.12),rgba(236,72,153,0.04))" },
-    { label: "Class 12", percent: 97, icon: "🎓", color: "#14b8a6", glow: "0 0 20px rgba(20,184,166,0.5), 0 0 40px rgba(20,184,166,0.2)", border: "rgba(20,184,166,0.5)", bg: "linear-gradient(135deg,rgba(20,184,166,0.12),rgba(20,184,166,0.04))" },
+    { label: "Class 6", percent: 100, icon: "📖", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
+    { label: "Class 7", percent: 100, icon: "📘", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
+    { label: "Class 8", percent: 100, icon: "📗", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
+    { label: "Class 9", percent: 100, icon: "📙", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
+    { label: "Class 10", percent: 100, icon: "📕", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
+    { label: "Class 11", percent: 98, icon: "📓", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
+    { label: "Class 12", percent: 97, icon: "🎓", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
     // 🏆 Competitive Exams
-    { label: "JEE Main", percent: 96, icon: "⚙️", color: "#1a27e1", glow: "0 0 20px rgba(26,39,225,0.5), 0 0 40px rgba(26,39,225,0.2)", border: "rgba(26,39,225,0.5)", bg: "linear-gradient(135deg,rgba(26,39,225,0.12),rgba(26,39,225,0.04))" },
-    { label: "JEE Advanced", percent: 92, icon: "🔬", color: "#7c3aed", glow: "0 0 20px rgba(124,58,237,0.5), 0 0 40px rgba(124,58,237,0.2)", border: "rgba(124,58,237,0.5)", bg: "linear-gradient(135deg,rgba(124,58,237,0.12),rgba(124,58,237,0.04))" },
-    { label: "NEET UG", percent: 95, icon: "🏥", color: "#dc2626", glow: "0 0 20px rgba(220,38,38,0.5), 0 0 40px rgba(220,38,38,0.2)", border: "rgba(220,38,38,0.5)", bg: "linear-gradient(135deg,rgba(220,38,38,0.12),rgba(220,38,38,0.04))" },
-    { label: "UPSC CSE", percent: 88, icon: "🏛️", color: "#b45309", glow: "0 0 20px rgba(180,83,9,0.5), 0 0 40px rgba(180,83,9,0.2)", border: "rgba(180,83,9,0.5)", bg: "linear-gradient(135deg,rgba(180,83,9,0.12),rgba(180,83,9,0.04))" },
+    { label: "JEE Main", percent: 96, icon: "⚙️", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
+    { label: "JEE Advanced", percent: 92, icon: "🔬", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
+    { label: "NEET UG", percent: 95, icon: "🏥", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
+    { label: "UPSC CSE", percent: 88, icon: "🏛️", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
     // 💼 Job Exams
-    { label: "Banking (IBPS/SBI)", percent: 90, icon: "🏦", color: "#0d9488", glow: "0 0 20px rgba(13,148,136,0.5), 0 0 40px rgba(13,148,136,0.2)", border: "rgba(13,148,136,0.5)", bg: "linear-gradient(135deg,rgba(13,148,136,0.12),rgba(13,148,136,0.04))" },
-    { label: "SSC CGL", percent: 89, icon: "📋", color: "#c026d3", glow: "0 0 20px rgba(192,38,211,0.5), 0 0 40px rgba(192,38,211,0.2)", border: "rgba(192,38,211,0.5)", bg: "linear-gradient(135deg,rgba(192,38,211,0.12),rgba(192,38,211,0.04))" },
-    { label: "Defence (NDA/CDS)", percent: 91, icon: "🛡️", color: "#b91c1c", glow: "0 0 20px rgba(185,28,28,0.5), 0 0 40px rgba(185,28,28,0.2)", border: "rgba(185,28,28,0.5)", bg: "linear-gradient(135deg,rgba(185,28,28,0.12),rgba(185,28,28,0.04))" },
+    { label: "Banking (IBPS/SBI)", percent: 90, icon: "🏦", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
+    { label: "SSC CGL", percent: 89, icon: "📋", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
+    { label: "Defence (NDA/CDS)", percent: 91, icon: "🛡️", color: "#ffd624", glow: "0 0 20px rgba(255,214,36,0.5), 0 0 40px rgba(255,214,36,0.2)", border: "rgba(255,214,36,0.5)", bg: "linear-gradient(135deg,rgba(255,214,36,0.12),rgba(255,214,36,0.04))" },
   ];
 
   const sectionHeaders = [
