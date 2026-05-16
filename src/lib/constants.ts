@@ -296,4 +296,37 @@ export const WHY_CHOOSE_US = [
       "Consistently producing top rankers across JEE, NEET, UPSC, and board examinations for over a decade.",
     color: "bg-cyan-50 text-cyan-700",
   },
+  export const LIVE_CLASSES = [
+  {
+    id: "jee-physics",
+    subject: "JEE Physics",
+    topic: "Wave Optics",
+    teacher: "Dr. Anand Kulkarni",
+    teacherInitial: "AK",
+    videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID_1",
+    baseViewers: 200,
+    icon: "⚛️",
+  },
+  {
+    id: "neet-biology",
+    subject: "NEET Biology",
+    topic: "Human Physiology",
+    teacher: "Prof. Meera Iyer",
+    teacherInitial: "MI",
+    videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID_2",
+    baseViewers: 180,
+    icon: "🧬",
+  },
+  {
+    id: "upsc-gs",
+    subject: "UPSC GS",
+    topic: "Indian Economy",
+    teacher: "Mr. Rajiv Nair",
+    teacherInitial: "RN",
+    videoUrl: "https://www.youtube.com/embed/YOUR_VIDEO_ID_3",
+    baseViewers: 150,
+    icon: "🏛️",
+  },
+];
+
 ];
