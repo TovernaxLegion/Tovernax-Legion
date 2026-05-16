@@ -87,7 +87,7 @@ export default function Navbar() {
               {/* Flashing Contact Numbers */}
               <div className="flex items-center gap-1.5">
                 <a href="tel:+91 959707 8806" className="text-[10px] font-bold animate-flash-phone whitespace-nowrap">
-                  📞 Call
+                  📞 Call 9597078806
                 </a>
                 <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold animate-flash-whatsapp whitespace-nowrap">
                   💬 Chat
