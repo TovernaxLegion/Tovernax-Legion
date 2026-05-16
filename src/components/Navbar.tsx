@@ -63,13 +63,13 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center gap-2 ml-6">
+            <div className="hidden lg:flex items-center gap-1 ml-2 min-w-0">
 
               {navLinks.map((link) => (
               <Link
               key={link.href}
-              href={link.href}
-              className="relative px-2 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 group"
+              href={link.h
+              className="relative px-1.5 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 group"
               style={link.label === "LMS" ? {
               color: "#ffd624",
               textShadow: "0 0 8px rgba(255,214,36,0.6), 0 0 20px rgba(255,214,36,0.3)",
@@ -85,7 +85,7 @@ export default function Navbar() {
               <div className="mx-1 h-6 w-px bg-white/15" />
 
               {/* Flashing Contact Numbers */}
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1">
                 <a href="tel:+91 959707 8806" className="text-xs font-bold animate-flash-phone whitespace-nowrap">
                   📞 +91 959707 8806
                 </a>
@@ -95,7 +95,7 @@ export default function Navbar() {
               </div>
 
               {/* Apply Now Button */}
-              <div className="ml-2">
+              <div className="ml-1 flex-shrink-0">
                 <Link
                 href="/admissions"
                 className="px-5 py-2 rounded-xl text-sm font-bold text-white transition-all duration-300 hover:scale-105 whitespace-nowrap"
