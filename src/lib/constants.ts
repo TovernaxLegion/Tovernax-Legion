@@ -304,7 +304,7 @@ export const WHY_CHOOSE_US = [
     topic: "Wave Optics",
     teacher: "Dr. Anand Kulkarni",
     teacherInitial: "AK",
-    videoUrl: "https://www.youtube.com/embed/v=iUtnZpzkbG8&list",
+    videoUrl: "https://www.youtube.com/embed/iUtnZpzkbG8&list",
     baseViewers: 200,
     icon: "⚛️",
   },
