@@ -296,6 +296,7 @@ export const WHY_CHOOSE_US = [
       "Consistently producing top rankers across JEE, NEET, UPSC, and board examinations for over a decade.",
     color: "bg-cyan-50 text-cyan-700",
   },
+  ];
   export const LIVE_CLASSES = [
   {
     id: "jee-physics",
@@ -303,7 +304,7 @@ export const WHY_CHOOSE_US = [
     topic: "Wave Optics",
     teacher: "Dr. Anand Kulkarni",
     teacherInitial: "AK",
-    videoUrl: "https://www.youtube.com/embed/v=iUtnZpzkbG8&list=PLGoWuvyH709vpTCVrjaJtaaFfite9U6u8",
+    videoUrl: "https://www.youtube.com/embed/v=iUtnZpzkbG8&list",
     baseViewers: 200,
     icon: "⚛️",
   },
@@ -327,6 +328,4 @@ export const WHY_CHOOSE_US = [
     baseViewers: 150,
     icon: "🏛️",
   },
-];
-
 ];
