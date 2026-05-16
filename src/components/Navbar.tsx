@@ -63,13 +63,13 @@ export default function Navbar() {
             </Link>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex items-center gap-1 ml-2 min-w-0">
+            <div className="hidden lg:flex items-center gap-0.5 ml-1 min-w-0">
 
               {navLinks.map((link) => (
               <Link
               key={link.href}
-              href={link.h
-              className="relative px-1.5 py-2 text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 group"
+              href={link.href}
+              className="relative px-1 py-2 text-xs font-medium text-white/80 hover:text-white transition-colors duration-300 group"
               style={link.label === "LMS" ? {
               color: "#ffd624",
               textShadow: "0 0 8px rgba(255,214,36,0.6), 0 0 20px rgba(255,214,36,0.3)",
@@ -85,12 +85,12 @@ export default function Navbar() {
               <div className="mx-1 h-6 w-px bg-white/15" />
 
               {/* Flashing Contact Numbers */}
-              <div className="flex items-center gap-1">
-                <a href="tel:+91 959707 8806" className="text-xs font-bold animate-flash-phone whitespace-nowrap">
-                  📞 +91 959707 8806
+              <div className="flex items-center gap-1.5">
+                <a href="tel:+91 959707 8806" className="text-[10px] font-bold animate-flash-phone whitespace-nowrap">
+                  📞 Call
                 </a>
-                <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="text-xs font-bold animate-flash-whatsapp whitespace-nowrap">
-                  💬 WhatsApp
+                <a href="https://wa.me/919597078806" target="_blank" rel="noopener noreferrer" className="text-[10px] font-bold animate-flash-whatsapp whitespace-nowrap">
+                  💬 Chat
                 </a>
               </div>
 
@@ -98,7 +98,7 @@ export default function Navbar() {
               <div className="ml-1 flex-shrink-0">
                 <Link
                 href="/admissions"
-                className="px-5 py-2 rounded-xl text-sm font-bold text-white transition-all duration-300 hover:scale-105 whitespace-nowrap"
+                className="px-3 py-1.5 rounded-xl text-xs font-bold text-white transition-all duration-300 hover:scale-105 whitespace-nowrap"
                   style={{
                     background: "linear-gradient(135deg, #ffd624, #f5b800)",
                     color: "#0a1560",
