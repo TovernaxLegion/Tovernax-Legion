@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Link from "next/link";
 import { PageHero } from "@/components/ui/PageHero";
+import { LiveClassCard } from "@/components/LiveClassCard";
 
 export const metadata: Metadata = {
   title: "Online Classes",
@@ -93,24 +94,8 @@ export default function OnlineClassesPage() {
               </div>
             </div>
             <div className="reveal-right">
-              <div className="rounded-3xl border border-white/10 overflow-hidden shadow-2xl" style={{ background: "rgba(255,255,255,0.05)" }}>
-                <div className="flex items-center gap-2 px-5 py-3 border-b border-white/10">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
-                  <span className="ml-3 text-xs text-gray-500 font-mono">tovernax-lms.app/live</span>
-                </div>
-                <div className="aspect-video bg-navy-900 flex items-center justify-center relative">
-                  <div className="text-center">
-                    <div className="text-5xl mb-3">⚛️</div>
-                    <div className="text-white font-semibold">JEE Physics — Wave Optics</div>
-                    <div className="text-gray-400 text-sm mt-1">Live • 234 students watching</div>
-                  </div>
-                  <div className="absolute bottom-3 left-3 flex gap-2">
-                    {["🎤", "📷", "💬", "👋"].map((icon, i) => (
-                      <div key={i} className="w-8 h-8 rounded-lg bg-white/10 flex items-center justify-center text-sm cursor-pointer hover:bg-white/20 transition-colors">
-                        {icon}
-                      </div>
+  <LiveClassCard />
+</div>
                     ))}
                   </div>
                   <div className="absolute top-3 right-3">
