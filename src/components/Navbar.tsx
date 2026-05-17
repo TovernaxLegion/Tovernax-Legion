@@ -23,7 +23,8 @@ export default function Navbar() {
     { href: "/hybrid-learning", label: "Hybrid", external: false },
     { href: "/counseling", label: "Counseling", external: false },
     { href: "/contact", label: "Contact", external: false },
-    { href: lmsUrl, label: "LMS Portal", external: true, isLMS: true },
+    { href: lmsUrl, label: "📚 LMS", external: true, isLMS: true },
+    { href: "/lms", label: "Exam", external: false },
   ];
 
   return (
@@ -69,39 +70,42 @@ export default function Navbar() {
               {navLinks.map((link) => {
                 const isLmsLink = link.isLMS;
                 
-                return isLmsLink ? (
-                  <a
-                    key={link.href}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="relative px-1 py-2 text-xs font-bold text-white transition-all duration-300 group hover:scale-105"
-                    style={{
-                      background: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
-                      color: "#ffffff",
-                      textShadow: "0 0 8px rgba(59,130,246,0.6), 0 0 20px rgba(139,92,246,0.3)",
-                      padding: "8px 12px",
-                      borderRadius: "8px",
-                      boxShadow: "0 4px 15px rgba(59,130,246,0.3)",
-                    }}
-                  >
-                    📚 {link.label}
-                    <span className="absolute -top-1 -right-1 inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-green-600 rounded-full"
-                      style={{ fontSize: "9px" }}>
-                      New
-                    </span>
-                  </a>
-                ) : (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="relative px-1 py-2 text-xs font-medium text-white/80 hover:text-white transition-colors duration-300 group"
-                  >
-                    {link.label}
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-5"
-                      style={{ background: "linear-gradient(90deg, #ffd624, #f5b800)" }} />
-                  </Link>
-                );
+                if (isLmsLink) {
+                  // External LMS Link
+                  return (
+                    <a
+                      key={link.href}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="relative px-3 py-2 text-xs font-bold text-white transition-all duration-300 group hover:scale-105"
+                      style={{
+                        background: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
+                        borderRadius: "8px",
+                        boxShadow: "0 4px 15px rgba(59,130,246,0.3)",
+                      }}
+                    >
+                      {link.label}
+                      <span className="absolute -top-1 -right-2 inline-flex items-center justify-center px-1.5 py-0.5 text-[9px] font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-green-600 rounded-full"
+                        style={{ fontSize: "9px" }}>
+                        New
+                      </span>
+                    </a>
+                  );
+                } else {
+                  // Internal Links
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="relative px-1 py-2 text-xs font-medium text-white/80 hover:text-white transition-colors duration-300 group"
+                    >
+                      {link.label}
+                      <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-5"
+                        style={{ background: "linear-gradient(90deg, #ffd624, #f5b800)" }} />
+                    </Link>
+                  );
+                }
               })}
 
               {/* Divider */}
@@ -170,7 +174,7 @@ export default function Navbar() {
         <div
           className="lg:hidden overflow-hidden transition-all duration-500"
           style={{
-            maxHeight: isOpen ? "500px" : "0px",
+            maxHeight: isOpen ? "600px" : "0px",
             opacity: isOpen ? 1 : 0,
           }}
         >
@@ -178,31 +182,35 @@ export default function Navbar() {
             {navLinks.map((link) => {
               const isLmsLink = link.isLMS;
               
-              return isLmsLink ? (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block px-4 py-3 rounded-xl text-sm font-bold text-white transition-all duration-300"
-                  style={{
-                    background: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
-                    boxShadow: "0 4px 15px rgba(59,130,246,0.3)",
-                  }}
-                  onClick={() => setIsOpen(false)}
-                >
-                  📚 {link.label}
-                </a>
-              ) : (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              );
+              if (isLmsLink) {
+                return (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block px-4 py-3 rounded-xl text-sm font-bold text-white transition-all duration-300"
+                    style={{
+                      background: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
+                      boxShadow: "0 4px 15px rgba(59,130,246,0.3)",
+                    }}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label} 🆕
+                  </a>
+                );
+              } else {
+                return (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 transition-all duration-300"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              }
             })}
             <div className="pt-2 flex flex-col gap-2" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
               <a href="tel:+91 959707 8806" className="block px-4 py-2 rounded-xl text-sm font-bold animate-flash-phone">
