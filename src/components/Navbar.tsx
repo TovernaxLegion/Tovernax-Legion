@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const lmsUrl = process.env.NEXT_PUBLIC_LMS_URL || "http://localhost:3000";
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -14,15 +15,15 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/about", label: "About" },
-    { href: "/courses", label: "Courses" },
-    { href: "/online-classes", label: "Online" },
-    { href: "/offline-classes", label: "Offline" },
-    { href: "/hybrid-learning", label: "Hybrid" },
-    { href: "/counseling", label: "Counseling" },
-    { href: "/contact", label: "Contact" },
-    { href: "/lms", label: "LMS" },
+    { href: "/", label: "Home", external: false },
+    { href: "/about", label: "About", external: false },
+    { href: "/courses", label: "Courses", external: false },
+    { href: "/online-classes", label: "Online", external: false },
+    { href: "/offline-classes", label: "Offline", external: false },
+    { href: "/hybrid-learning", label: "Hybrid", external: false },
+    { href: "/counseling", label: "Counseling", external: false },
+    { href: "/contact", label: "Contact", external: false },
+    { href: lmsUrl, label: "LMS Portal", external: true, isLMS: true },
   ];
 
   return (
@@ -43,7 +44,7 @@ export default function Navbar() {
             : "0 4px 16px rgba(0, 0, 0, 0.15)",
         }}
       >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16 items-center">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3 group flex-shrink-0 -ml-2">
@@ -53,7 +54,7 @@ export default function Navbar() {
                 <img src="/logo.png" alt="Logo" className="h-16 w-auto relative z-10 group-hover:scale-105 transition-transform duration-300" />
               </div>
               <div>
-               <span className="text-lg font-bold transition-colors duration-300" style={{ color: "#ffd624" }}>
+                <span className="text-lg font-bold transition-colors duration-300" style={{ color: "#ffd624" }}>
                   Tovernax Academy
                 </span>
                 <span className="block text-[10px] font-medium tracking-wider text-white/80">
@@ -65,21 +66,43 @@ export default function Navbar() {
             {/* Desktop Menu */}
             <div className="hidden lg:flex items-center gap-0.5 ml-1 min-w-0">
 
-              {navLinks.map((link) => (
-              <Link
-              key={link.href}
-              href={link.href}
-              className="relative px-1 py-2 text-xs font-medium text-white/80 hover:text-white transition-colors duration-300 group"
-              style={link.label === "LMS" ? {
-              color: "#ffd624",
-              textShadow: "0 0 8px rgba(255,214,36,0.6), 0 0 20px rgba(255,214,36,0.3)",
-              } : undefined}
-    >
-    {link.label}
-    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-5"
-      style={{ background: link.label === "LMS" ? "linear-gradient(90deg, #3b82f6, #8b5cf6)" : "linear-gradient(90deg, #ffd624, #f5b800)" }} />
-  </Link>
-))}
+              {navLinks.map((link) => {
+                const isLmsLink = link.isLMS;
+                
+                return isLmsLink ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative px-1 py-2 text-xs font-bold text-white transition-all duration-300 group hover:scale-105"
+                    style={{
+                      background: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
+                      color: "#ffffff",
+                      textShadow: "0 0 8px rgba(59,130,246,0.6), 0 0 20px rgba(139,92,246,0.3)",
+                      padding: "8px 12px",
+                      borderRadius: "8px",
+                      boxShadow: "0 4px 15px rgba(59,130,246,0.3)",
+                    }}
+                  >
+                    📚 {link.label}
+                    <span className="absolute -top-1 -right-1 inline-flex items-center justify-center px-2 py-0.5 text-xs font-bold leading-none text-white transform translate-x-1/2 -translate-y-1/2 bg-green-600 rounded-full"
+                      style={{ fontSize: "9px" }}>
+                      New
+                    </span>
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="relative px-1 py-2 text-xs font-medium text-white/80 hover:text-white transition-colors duration-300 group"
+                  >
+                    {link.label}
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-5"
+                      style={{ background: "linear-gradient(90deg, #ffd624, #f5b800)" }} />
+                  </Link>
+                );
+              })}
 
               {/* Divider */}
               <div className="mx-1 h-6 w-px bg-white/15" />
@@ -97,8 +120,8 @@ export default function Navbar() {
               {/* Apply Now Button */}
               <div className="ml-1 flex-shrink-0">
                 <Link
-                href="/admissions"
-                className="px-3 py-1.5 rounded-xl text-xs font-bold text-white transition-all duration-300 hover:scale-105 whitespace-nowrap"
+                  href="/admissions"
+                  className="px-3 py-1.5 rounded-xl text-xs font-bold text-white transition-all duration-300 hover:scale-105 whitespace-nowrap"
                   style={{
                     background: "linear-gradient(135deg, #ffd624, #f5b800)",
                     color: "#0a1560",
@@ -152,16 +175,35 @@ export default function Navbar() {
           }}
         >
           <div className="px-4 pb-4 pt-2 space-y-1" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 transition-all duration-300"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isLmsLink = link.isLMS;
+              
+              return isLmsLink ? (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block px-4 py-3 rounded-xl text-sm font-bold text-white transition-all duration-300"
+                  style={{
+                    background: "linear-gradient(135deg, #3b82f6, #8b5cf6)",
+                    boxShadow: "0 4px 15px rgba(59,130,246,0.3)",
+                  }}
+                  onClick={() => setIsOpen(false)}
+                >
+                  📚 {link.label}
+                </a>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="block px-4 py-3 rounded-xl text-sm font-medium text-white/80 hover:text-white hover:bg-white/5 transition-all duration-300"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <div className="pt-2 flex flex-col gap-2" style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
               <a href="tel:+91 959707 8806" className="block px-4 py-2 rounded-xl text-sm font-bold animate-flash-phone">
                 📞 Call: +91 959707 8806
